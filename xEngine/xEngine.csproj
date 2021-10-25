@@ -1,0 +1,559 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{F928FE1D-7C8F-4DC7-B98A-ABFC709B2A91}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>xEngine</RootNamespace>
+    <AssemblyName>xEngine</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\公共组件DLL\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;FEAT_COMPILER PLAT_BINARYFORMATTER PLAT_XMLSERIALIZER</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\HttpTest.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Prefer32Bit>false</Prefer32Bit>
+    <WarningLevel>4</WarningLevel>
+    <Optimize>false</Optimize>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>..\XiakeEngine\bin\Release\</OutputPath>
+    <DefineConstants>TRACE;FEAT_COMPILER PLAT_BINARYFORMATTER PLAT_XMLSERIALIZER</DefineConstants>
+    <Optimize>true</Optimize>
+    <CodeAnalysisLogFile>bin\Release\HttpTest.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Prefer32Bit>false</Prefer32Bit>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\Base32.cs" />
+    <Compile Include="Common\ByteHelper.cs" />
+    <Compile Include="Common\CorpusHelper.cs" />
+    <Compile Include="Common\FileHelper.cs" />
+    <Compile Include="Common\GetArticle.cs" />
+    <Compile Include="Common\IP.cs" />
+    <Compile Include="Common\KeywordDbHelper.cs" />
+    <Compile Include="Common\MimeMapping.cs" />
+    <Compile Include="Common\RandStr.cs" />
+    <Compile Include="Common\SdkHelper.cs" />
+    <Compile Include="Common\HttpHelper.cs" />
+    <Compile Include="Common\ServiceHelper.cs" />
+    <Compile Include="Common\SocketHelper.cs" />
+    <Compile Include="Common\Sound.cs" />
+    <Compile Include="Common\xConsole.cs" />
+    <Compile Include="Common\XiakeLruCache.cs" />
+    <Compile Include="Common\XSerializable.cs" />
+    <Compile Include="Common\StrHelper.cs" />
+    <Compile Include="Config.cs" />
+    <Compile Include="Execute\Http.cs" />
+    <Compile Include="Execute\Rules.cs" />
+    <Compile Include="Execute\Sim.cs" />
+    <Compile Include="Log.cs" />
+    <Compile Include="Model\Command.cs" />
+    <Compile Include="Model\Common\CorpusElement.cs" />
+    <Compile Include="Model\Common\CropusDb.cs" />
+    <Compile Include="Model\Common\FileInfo.cs" />
+    <Compile Include="Model\Common\KeywordDb.cs" />
+    <Compile Include="Model\Execute\Http\ByteData.cs" />
+    <Compile Include="Model\Execute\Http\xAcoount.cs" />
+    <Compile Include="Model\Execute\Http\xCookie.cs" />
+    <Compile Include="Model\Execute\Http\xCookieManager.cs" />
+    <Compile Include="Model\Execute\Http\xRequest.cs" />
+    <Compile Include="Model\Execute\Http\xResponse.cs" />
+    <Compile Include="Model\Execute\Http\xScript.cs" />
+    <Compile Include="Model\Execute\Http\xTag.cs" />
+    <Compile Include="Model\Execute\Rules\RulesChild.cs" />
+    <Compile Include="Model\Execute\Rules\RulesMain.cs" />
+    <Compile Include="Model\Execute\Sim\SimMyColor.cs" />
+    <Compile Include="Model\Execute\Sim\SimMyPoint.cs" />
+    <Compile Include="Model\Execute\Sim\SimPoint.cs" />
+    <Compile Include="Plugin\MyProto\BclHelpers.cs" />
+    <Compile Include="Plugin\MyProto\BufferExtension.cs" />
+    <Compile Include="Plugin\MyProto\BufferPool.cs" />
+    <Compile Include="Plugin\MyProto\CallbackAttributes.cs" />
+    <Compile Include="Plugin\MyProto\Compiler\CompilerContext.cs" />
+    <Compile Include="Plugin\MyProto\Compiler\CompilerDelegates.cs" />
+    <Compile Include="Plugin\MyProto\Compiler\Local.cs" />
+    <Compile Include="Plugin\MyProto\DataFormat.cs" />
+    <Compile Include="Plugin\MyProto\Extensible.cs" />
+    <Compile Include="Plugin\MyProto\ExtensibleUtil.cs" />
+    <Compile Include="Plugin\MyProto\GlobalSuppressions.cs" />
+    <Compile Include="Plugin\MyProto\Helpers.cs" />
+    <Compile Include="Plugin\MyProto\IExtensible.cs" />
+    <Compile Include="Plugin\MyProto\IExtension.cs" />
+    <Compile Include="Plugin\MyProto\ImplicitFields.cs" />
+    <Compile Include="Plugin\MyProto\KeyValuePairProxy.cs" />
+    <Compile Include="Plugin\MyProto\Meta\AttributeMap.cs" />
+    <Compile Include="Plugin\MyProto\Meta\BasicList.cs" />
+    <Compile Include="Plugin\MyProto\Meta\CallbackSet.cs" />
+    <Compile Include="Plugin\MyProto\Meta\MetaType.cs" />
+    <Compile Include="Plugin\MyProto\Meta\RuntimeTypeModel.cs" />
+    <Compile Include="Plugin\MyProto\Meta\SubType.cs" />
+    <Compile Include="Plugin\MyProto\Meta\TypeFormatEventArgs.cs" />
+    <Compile Include="Plugin\MyProto\Meta\TypeModel.cs" />
+    <Compile Include="Plugin\MyProto\Meta\ValueMember.cs" />
+    <Compile Include="Plugin\MyProto\NetObjectCache.cs" />
+    <Compile Include="Plugin\MyProto\PrefixStyle.cs" />
+    <Compile Include="Plugin\MyProto\ProtoContractAttribute.cs" />
+    <Compile Include="Plugin\MyProto\ProtoEnumAttribute.cs" />
+    <Compile Include="Plugin\MyProto\ProtoException.cs" />
+    <Compile Include="Plugin\MyProto\ProtoIgnoreAttribute.cs" />
+    <Compile Include="Plugin\MyProto\ProtoIncludeAttribute.cs" />
+    <Compile Include="Plugin\MyProto\ProtoMemberAttribute.cs" />
+    <Compile Include="Plugin\MyProto\ProtoReader.cs" />
+    <Compile Include="Plugin\MyProto\ProtoWriter.cs" />
+    <Compile Include="Plugin\MyProto\SerializationContext.cs" />
+    <Compile Include="Plugin\MyProto\Serializer.cs" />
+    <Compile Include="Plugin\MyProto\Serializers\ArrayDecorator.cs" />
+    <Compile Include="Plugin\MyProto\Serializers\BlobSerializer.cs" />
+    <Compile Include="Plugin\MyProto\Serializers\BooleanSerializer.cs" />
+    <Compile Include="Plugin\MyProto\Serializers\ByteSerializer.cs" />
+    <Compile Include="Plugin\MyProto\Serializers\CharSerializer.cs" />
+    <Compile Include="Plugin\MyProto\Serializers\CompiledSerializer.cs" />
+    <Compile Include="Plugin\MyProto\Serializers\DateTimeSerializer.cs" />
+    <Compile Include="Plugin\MyProto\Serializers\DecimalSerializer.cs" />
+    <Compile Include="Plugin\MyProto\Serializers\DefaultValueDecorator.cs" />
+    <Compile Include="Plugin\MyProto\Serializers\DoubleSerializer.cs" />
+    <Compile Include="Plugin\MyProto\Serializers\EnumSerializer.cs" />
+    <Compile Include="Plugin\MyProto\Serializers\FieldDecorator.cs" />
+    <Compile Include="Plugin\MyProto\Serializers\GuidSerializer.cs" />
+    <Compile Include="Plugin\MyProto\Serializers\Int16Serializer.cs" />
+    <Compile Include="Plugin\MyProto\Serializers\Int32Serializer.cs" />
+    <Compile Include="Plugin\MyProto\Serializers\Int64Serializer.cs" />
+    <Compile Include="Plugin\MyProto\Serializers\IProtoSerializer.cs" />
+    <Compile Include="Plugin\MyProto\Serializers\IProtoTypeSerializer.cs" />
+    <Compile Include="Plugin\MyProto\Serializers\ISerializerProxy.cs" />
+    <Compile Include="Plugin\MyProto\Serializers\KeyValuePairDecorator.cs" />
+    <Compile Include="Plugin\MyProto\Serializers\ListDecorator.cs" />
+    <Compile Include="Plugin\MyProto\Serializers\MemberSpecifiedDecorator.cs" />
+    <Compile Include="Plugin\MyProto\Serializers\NetObjectSerializer.cs" />
+    <Compile Include="Plugin\MyProto\Serializers\NullDecorator.cs" />
+    <Compile Include="Plugin\MyProto\Serializers\ParseableSerializer.cs" />
+    <Compile Include="Plugin\MyProto\Serializers\PropertyDecorator.cs" />
+    <Compile Include="Plugin\MyProto\Serializers\ProtoDecoratorBase.cs" />
+    <Compile Include="Plugin\MyProto\Serializers\SByteSerializer.cs" />
+    <Compile Include="Plugin\MyProto\Serializers\SingleSerializer.cs" />
+    <Compile Include="Plugin\MyProto\Serializers\StringSerializer.cs" />
+    <Compile Include="Plugin\MyProto\Serializers\SubItemSerializer.cs" />
+    <Compile Include="Plugin\MyProto\Serializers\SurrogateSerializer.cs" />
+    <Compile Include="Plugin\MyProto\Serializers\SystemTypeSerializer.cs" />
+    <Compile Include="Plugin\MyProto\Serializers\TagDecorator.cs" />
+    <Compile Include="Plugin\MyProto\Serializers\TimeSpanSerializer.cs" />
+    <Compile Include="Plugin\MyProto\Serializers\TupleSerializer.cs" />
+    <Compile Include="Plugin\MyProto\Serializers\TypeSerializer.cs" />
+    <Compile Include="Plugin\MyProto\Serializers\UInt16Serializer.cs" />
+    <Compile Include="Plugin\MyProto\Serializers\UInt32Serializer.cs" />
+    <Compile Include="Plugin\MyProto\Serializers\UInt64Serializer.cs" />
+    <Compile Include="Plugin\MyProto\Serializers\UriDecorator.cs" />
+    <Compile Include="Plugin\MyProto\ServiceModel\ProtoBehaviorAttribute.cs" />
+    <Compile Include="Plugin\MyProto\ServiceModel\ProtoBehaviorExtensionElement.cs" />
+    <Compile Include="Plugin\MyProto\ServiceModel\ProtoEndpointBehavior.cs" />
+    <Compile Include="Plugin\MyProto\ServiceModel\ProtoOperationBehavior.cs" />
+    <Compile Include="Plugin\MyProto\ServiceModel\XmlProtoSerializer.cs" />
+    <Compile Include="Plugin\MyProto\SubItemToken.cs" />
+    <Compile Include="Plugin\MyProto\WireType.cs" />
+    <Compile Include="Model\License\MyInfo.cs" />
+    <Compile Include="Model\License\MyLicense.cs" />
+    <Compile Include="Model\License\MySoft.cs" />
+    <Compile Include="Plugin\HtmlParsing\crc32.cs" />
+    <Compile Include="Plugin\HtmlParsing\EncodingFoundException.cs" />
+    <Compile Include="Plugin\HtmlParsing\HtmlAttribute.cs" />
+    <Compile Include="Plugin\HtmlParsing\HtmlAttributeCollection.cs" />
+    <Compile Include="Plugin\HtmlParsing\HtmlCmdLine.cs" />
+    <Compile Include="Plugin\HtmlParsing\HtmlCommentNode.cs" />
+    <Compile Include="Plugin\HtmlParsing\HtmlConsoleListener.cs" />
+    <Compile Include="Plugin\HtmlParsing\HtmlDocument.cs" />
+    <Compile Include="Plugin\HtmlParsing\HtmlElementFlag.cs" />
+    <Compile Include="Plugin\HtmlParsing\HtmlEntity.cs" />
+    <Compile Include="Plugin\HtmlParsing\HtmlNameTable.cs" />
+    <Compile Include="Plugin\HtmlParsing\HtmlNode.cs" />
+    <Compile Include="Plugin\HtmlParsing\HtmlNodeCollection.cs" />
+    <Compile Include="Plugin\HtmlParsing\HtmlNodeNavigator.cs" />
+    <Compile Include="Plugin\HtmlParsing\HtmlNodeType.cs" />
+    <Compile Include="Plugin\HtmlParsing\HtmlParseError.cs" />
+    <Compile Include="Plugin\HtmlParsing\HtmlParseErrorCode.cs" />
+    <Compile Include="Plugin\HtmlParsing\HtmlTextNode.cs" />
+    <Compile Include="Plugin\HtmlParsing\HtmlWeb.cs" />
+    <Compile Include="Plugin\HtmlParsing\HtmlWebException.cs" />
+    <Compile Include="Plugin\HtmlParsing\IOLibrary.cs" />
+    <Compile Include="Plugin\HtmlParsing\MixedCodeDocument.cs" />
+    <Compile Include="Plugin\HtmlParsing\MixedCodeDocumentCodeFragment.cs" />
+    <Compile Include="Plugin\HtmlParsing\MixedCodeDocumentFragment.cs" />
+    <Compile Include="Plugin\HtmlParsing\MixedCodeDocumentFragmentList.cs" />
+    <Compile Include="Plugin\HtmlParsing\MixedCodeDocumentFragmentType.cs" />
+    <Compile Include="Plugin\HtmlParsing\MixedCodeDocumentTextFragment.cs" />
+    <Compile Include="Plugin\HtmlParsing\NameValuePairList.cs" />
+    <Compile Include="License.cs" />
+    <Compile Include="Properties\Annotations.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Common\TimeOutSocket.cs" />
+    <Compile Include="Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="XUI\ChromiumBrowser.cs" />
+    <Compile Include="XUI\ChromiumCore\BrowserProcess\BrowserClient.cs" />
+    <Compile Include="XUI\ChromiumCore\BrowserProcess\BrowserProcess.cs" />
+    <Compile Include="XUI\ChromiumCore\BrowserProcess\Events.cs" />
+    <Compile Include="XUI\ChromiumCore\BrowserProcess\LifeSpanHandler.cs" />
+    <Compile Include="XUI\ChromiumCore\BrowserProcess\RequestHandler.cs" />
+    <Compile Include="XUI\ChromiumCore\EvaluateTask.cs" />
+    <Compile Include="XUI\ChromiumCore\Javascript\JSDynamicProperty.cs" />
+    <Compile Include="XUI\ChromiumCore\Javascript\JSFunction.cs" />
+    <Compile Include="XUI\ChromiumCore\Javascript\JSObject.cs" />
+    <Compile Include="XUI\ChromiumCore\Javascript\JSProperty.cs" />
+    <Compile Include="XUI\ChromiumCore\RenderProcess\RenderProcess.cs" />
+    <Compile Include="XUI\ChromiumCore\RenderProcess\RenderProcessHandler.cs" />
+    <Compile Include="XUI\ChromiumCore\VisitDomTask.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxApi.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxApiLoader.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxApp.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxAuthCallback.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxBeforeDownloadCallback.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxBinaryValue.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxBrowser.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxBrowserHost.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxBrowserProcessHandler.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxBrowserSettings.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxCallback.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxClient.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxCommandLine.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxCompletionCallback.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxContextMenuHandler.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxContextMenuParams.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxCookie.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxCookieManager.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxCookieVisitor.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxCursorInfo.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxDeleteCookiesCallback.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxDialogHandler.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxDictionaryValue.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxDisplayHandler.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxDomDocument.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxDomNode.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxDomVisitor.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxDownloadHandler.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxDownloadItem.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxDownloadItemCallback.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxDragData.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxDraggableRegion.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxDragHandler.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxEndTracingCallback.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxEnums.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxFileDialogCallback.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxFindHandler.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxFocusHandler.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxFrame.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxGeolocationCallback.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxGeolocationHandler.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxGeoposition.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxGetGeolocationCallback.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxJsDialogCallback.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxJsDialogHandler.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxKeyboardHandler.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxKeyEvent.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxLifeSpanHandler.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxListValue.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxLoadHandler.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxMainArgsLinux.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxMainArgsWindows.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxMenuModel.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxMouseEvent.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxNavigationEntry.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxNavigationEntryVisitor.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxPageRange.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxPdfPrintCallback.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxPdfPrintSettings.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxPoint.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxPopupFeatures.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxPostData.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxPostDataElement.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxPrintDialogCallback.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxPrintHandler.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxPrintJobCallback.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxPrintSettings.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxProcessMessage.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxReadHandler.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxRect.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxRenderHandler.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxRenderProcessHandler.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxRequest.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxRequestCallback.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxRequestContext.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxRequestContextHandler.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxRequestContextSettings.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxRequestHandler.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxResolveCallback.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxResourceBundle.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxResourceBundleHandler.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxResourceHandler.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxResponse.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxResponseFilter.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxRunContextMenuCallback.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxRunFileDialogCallback.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxRuntime.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxSchemeHandlerFactory.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxSchemeRegistrar.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxScreenInfo.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxSetCookieCallback.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxSettings.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxSize.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxSslCertPrincipal.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxSslInfo.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxStreamReader.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxStreamWriter.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxStringVisitor.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxTask.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxTaskRunner.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxTime.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxUrlParts.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxUrlRequest.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxUrlRequestClient.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxV8Accessor.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxV8Context.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxV8Exception.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxV8Handler.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxV8StackFrame.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxV8StackTrace.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxV8Value.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxValue.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxWebPluginInfo.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxWebPluginInfoVisitor.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxWebPluginUnstableCallback.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxWindowInfoLinux.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxWindowInfoWindows.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxWriteHandler.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxXmlReader.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\CfxZipReader.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\Remote\CfrApp.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\Remote\CfrBinaryValue.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\Remote\CfrBrowser.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\Remote\CfrCommandLine.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\Remote\CfrDictionaryValue.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\Remote\CfrDomDocument.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\Remote\CfrDomNode.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\Remote\CfrDomVisitor.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\Remote\CfrFrame.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\Remote\CfrListValue.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\Remote\CfrLoadHandler.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\Remote\CfrPostData.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\Remote\CfrPostDataElement.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\Remote\CfrProcessMessage.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\Remote\CfrRenderProcessHandler.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\Remote\CfrRequest.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\Remote\CfrResourceBundleHandler.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\Remote\CfrRuntime.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\Remote\CfrSchemeRegistrar.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\Remote\CfrStringVisitor.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\Remote\CfrTask.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\Remote\CfrTaskRunner.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\Remote\CfrTime.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\Remote\CfrV8Accessor.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\Remote\CfrV8Context.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\Remote\CfrV8Exception.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\Remote\CfrV8Handler.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\Remote\CfrV8StackFrame.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\Remote\CfrV8StackTrace.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\Remote\CfrV8Value.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\Remote\CfrValue.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\Remote\CfxAppRemoteCalls.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\Remote\CfxBinaryValueRemoteCalls.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\Remote\CfxBrowserRemoteCalls.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\Remote\CfxCommandLineRemoteCalls.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\Remote\CfxDictionaryValueRemoteCalls.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\Remote\CfxDomDocumentRemoteCalls.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\Remote\CfxDomNodeRemoteCalls.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\Remote\CfxDomVisitorRemoteCalls.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\Remote\CfxFrameRemoteCalls.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\Remote\CfxListValueRemoteCalls.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\Remote\CfxLoadHandlerRemoteCalls.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\Remote\CfxPostDataElementRemoteCalls.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\Remote\CfxPostDataRemoteCalls.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\Remote\CfxProcessMessageRemoteCalls.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\Remote\CfxRenderProcessHandlerRemoteCalls.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\Remote\CfxRequestRemoteCalls.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\Remote\CfxResourceBundleHandlerRemoteCalls.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\Remote\CfxRuntimeRemoteCalls.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\Remote\CfxSchemeRegistrarRemoteCalls.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\Remote\CfxStringVisitorRemoteCalls.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\Remote\CfxTaskRemoteCalls.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\Remote\CfxTaskRunnerRemoteCalls.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\Remote\CfxTimeRemoteCalls.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\Remote\CfxV8AccessorRemoteCalls.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\Remote\CfxV8ContextRemoteCalls.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\Remote\CfxV8ExceptionRemoteCalls.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\Remote\CfxV8HandlerRemoteCalls.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\Remote\CfxV8StackFrameRemoteCalls.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\Remote\CfxV8StackTraceRemoteCalls.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\Remote\CfxV8ValueRemoteCalls.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\Remote\CfxValueRemoteCalls.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\Remote\RemoteCallFactory.cs" />
+    <Compile Include="XUI\ChromiumFX\Generated\Remote\RemoteCallId.cs" />
+    <Compile Include="XUI\ChromiumFX\Source\CfxApi.cs" />
+    <Compile Include="XUI\ChromiumFX\Source\CfxApp.cs" />
+    <Compile Include="XUI\ChromiumFX\Source\CfxArray.cs" />
+    <Compile Include="XUI\ChromiumFX\Source\CfxBase.cs" />
+    <Compile Include="XUI\ChromiumFX\Source\CfxBinaryValue.cs" />
+    <Compile Include="XUI\ChromiumFX\Source\CfxColor.cs" />
+    <Compile Include="XUI\ChromiumFX\Source\CfxDebug.cs" />
+    <Compile Include="XUI\ChromiumFX\Source\CfxEventArgs.cs" />
+    <Compile Include="XUI\ChromiumFX\Source\CfxException.cs" />
+    <Compile Include="XUI\ChromiumFX\Source\CfxMainArgs.cs" />
+    <Compile Include="XUI\ChromiumFX\Source\CfxMainArgsLinux.cs" />
+    <Compile Include="XUI\ChromiumFX\Source\CfxObject.cs" />
+    <Compile Include="XUI\ChromiumFX\Source\CfxPlatform.cs" />
+    <Compile Include="XUI\ChromiumFX\Source\CfxRemoteCallbackManager.cs" />
+    <Compile Include="XUI\ChromiumFX\Source\CfxRemoteCallContext.cs" />
+    <Compile Include="XUI\ChromiumFX\Source\CfxRuntime.cs" />
+    <Compile Include="XUI\ChromiumFX\Source\CfxStructure.cs" />
+    <Compile Include="XUI\ChromiumFX\Source\CfxTime.cs" />
+    <Compile Include="XUI\ChromiumFX\Source\CfxWindowInfo.cs" />
+    <Compile Include="XUI\ChromiumFX\Source\CfxZipReader.cs" />
+    <Compile Include="XUI\ChromiumFX\Source\NativeFunctionLoader.cs" />
+    <Compile Include="XUI\ChromiumFX\Source\PinnedObject.cs" />
+    <Compile Include="XUI\ChromiumFX\Source\PinnedString.cs" />
+    <Compile Include="XUI\ChromiumFX\Source\Remote\BrowserProcessCall.cs" />
+    <Compile Include="XUI\ChromiumFX\Source\Remote\CfrBase.cs" />
+    <Compile Include="XUI\ChromiumFX\Source\Remote\CfrBinaryValue.cs" />
+    <Compile Include="XUI\ChromiumFX\Source\Remote\CfrEventArgs.cs" />
+    <Compile Include="XUI\ChromiumFX\Source\Remote\CfrMarshal.cs" />
+    <Compile Include="XUI\ChromiumFX\Source\Remote\CfrObject.cs" />
+    <Compile Include="XUI\ChromiumFX\Source\Remote\CfrRuntime.cs" />
+    <Compile Include="XUI\ChromiumFX\Source\Remote\CfrStructure.cs" />
+    <Compile Include="XUI\ChromiumFX\Source\Remote\CfrTime.cs" />
+    <Compile Include="XUI\ChromiumFX\Source\Remote\CfrV8Value.cs" />
+    <Compile Include="XUI\ChromiumFX\Source\Remote\PipeBufferStream.cs" />
+    <Compile Include="XUI\ChromiumFX\Source\Remote\PipeFactory.cs" />
+    <Compile Include="XUI\ChromiumFX\Source\Remote\RemoteCall.cs" />
+    <Compile Include="XUI\ChromiumFX\Source\Remote\RemoteCallStack.cs" />
+    <Compile Include="XUI\ChromiumFX\Source\Remote\RemoteClient.cs" />
+    <Compile Include="XUI\ChromiumFX\Source\Remote\RemoteConnection.cs" />
+    <Compile Include="XUI\ChromiumFX\Source\Remote\RemoteProxy.cs" />
+    <Compile Include="XUI\ChromiumFX\Source\Remote\RemotePtr.cs" />
+    <Compile Include="XUI\ChromiumFX\Source\Remote\RemoteService.cs" />
+    <Compile Include="XUI\ChromiumFX\Source\Remote\RenderProcessCall.cs" />
+    <Compile Include="XUI\ChromiumFX\Source\Remote\StreamHandler.cs" />
+    <Compile Include="XUI\ChromiumFX\Source\Remote\WindowsPipeFactory.cs" />
+    <Compile Include="XUI\ChromiumFX\Source\Remote\WorkerPool.cs" />
+    <Compile Include="XUI\ChromiumFX\Source\StringFunctions.cs" />
+    <Compile Include="XUI\ChromiumFX\Source\TimeFunctions.cs" />
+    <Compile Include="XUI\ChromiumFX\Source\WeakCache.cs" />
+    <Compile Include="XUI\ChromiumFX\Source\WindowStyle.cs" />
+    <Compile Include="XUI\ControlExtended.cs" />
+    <Compile Include="XUI\enum.cs" />
+    <Compile Include="XUI\HtmlUIException.cs" />
+    <Compile Include="XUI\HtmlUIForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XUI\HtmlUILauncher.cs" />
+    <Compile Include="XUI\IChromiumWebBrowser.cs" />
+    <Compile Include="XUI\Internal\BrowserWidgetHandleFinder.cs" />
+    <Compile Include="XUI\Internal\BrowserWidgetMessageInterceptor.cs" />
+    <Compile Include="XUI\Internal\NativeMethods.cs" />
+    <Compile Include="XUI\Internal\NonclientNativeWindow.cs" />
+    <Compile Include="XUI\JsHostWindowObject.cs" />
+    <Compile Include="XUI\Resource\EmbeddedResourceHandler.cs" />
+    <Compile Include="XUI\Resource\EmbeddedSchemeHandlerFactory.cs" />
+    <Compile Include="XUI\Resource\MimeHelper.cs" />
+    <Compile Include="XUI\Resource\WebResource.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Plugin\MyProto\Web\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BottomRight.png" />
+    <None Include="Resources\BottomLeft.png" />
+    <None Include="Resources\Bottom.png" />
+    <None Include="Resources\TopRight.png" />
+    <None Include="Resources\TopLeft.png" />
+    <None Include="Resources\Top.png" />
+    <None Include="Resources\Right.png" />
+    <None Include="Resources\Left.png" />
+    <None Include="Resources\InitialScripts.js" />
+    <None Include="Resources\ExtensionScripts.js" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

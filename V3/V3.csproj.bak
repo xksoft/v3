@@ -1,0 +1,1063 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A5E8C372-8235-4F13-9865-F34303F17E61}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>V3Start</RootNamespace>
+    <AssemblyName>V3</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;Debug</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\V3.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;Final</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\V3.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>myico.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>xiaoxia.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>CDE6589374BE0D10E17FE17F4F84C40EDF5C036C</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>
+    </ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '本地调试|x86'">
+    <OutputPath>bin\x86\本地调试\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '本地调试|AnyCPU'">
+    <OutputPath>bin\本地调试\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;Debug</DefineConstants>
+    <Optimize>false</Optimize>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '最终发布|x86'">
+    <OutputPath>bin\x86\最终发布\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\V3.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '最终发布|AnyCPU'">
+    <OutputPath>bin\最终发布\</OutputPath>
+    <DefineConstants>TRACE;Final</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\V3.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+  </PropertyGroup>
+  <PropertyGroup>
+    <DelaySign>false</DelaySign>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar2, Version=11.7.0.1, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.BonusSkins.v13.2, Version=13.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v13.2.Core, Version=13.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v13.2, Version=13.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v13.2.Core, Version=13.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.TouchSkins.v13.2, Version=13.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Tutorials.v13.2, Version=13.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v13.2, Version=13.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v13.2.UI, Version=13.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v13.2, Version=13.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v13.2.UI, Version=13.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v13.2, Version=13.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v13.2, Version=13.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v13.2, Version=13.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v13.2, Version=13.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v13.2, Version=13.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Interop.HttpWatch, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c18e158d7c0e4ab0, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>bin\Debug\Interop.HttpWatch.dll</HintPath>
+    </Reference>
+    <Reference Include="Lucene.Net">
+      <HintPath>C:\Users\Administrator\Desktop\xiakezhanqun\Lucene.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="xEngine, Version=1.0.0.0, Culture=neutral, PublicKeyToken=2343a57ddcde5a24, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\xEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="xiakeModel">
+      <HintPath>C:\Users\Administrator\Desktop\xiakeModel.dll</HintPath>
+    </Reference>
+    <Reference Include="xModel, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c18e158d7c0e4ab0, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\侠客软件平台\sdk\xModel.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Command\AiGet.cs" />
+    <Compile Include="Bll\ArticleBll.cs" />
+    <Compile Include="Command\Console.cs" />
+    <Compile Include="Bll\DbBll.cs" />
+    <Compile Include="Command\fanyi.cs" />
+    <Compile Include="Bll\GetBll.cs" />
+    <Compile Include="Command\HtmlEngine.cs" />
+    <Compile Include="Bll\ModelShopBll.cs" />
+    <Compile Include="Command\SetArticle.cs" />
+    <Compile Include="Command\TaskRun.cs" />
+    <Compile Include="Command\V3Helper.cs" />
+    <Compile Include="Command\Log.cs" />
+    <Compile Include="Bll\PostBll.cs" />
+    <Compile Include="Bll\PointBll.cs" />
+    <Compile Include="Bll\TaskBll.cs" />
+    <Compile Include="frmExport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmExport.Designer.cs">
+      <DependentUpon>frmExport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HtmlEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HtmlEditor.Designer.cs">
+      <DependentUpon>HtmlEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyHtmlEdiror.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyHtmlEdiror.Designer.cs">
+      <DependentUpon>MyHtmlEdiror.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V3Form\give.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V3Form\give.Designer.cs">
+      <DependentUpon>give.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V3Form\SelectClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V3Form\SelectClass.Designer.cs">
+      <DependentUpon>SelectClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V3Form\Setting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V3Form\Setting.Designer.cs">
+      <DependentUpon>Setting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="V3Form\DbManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V3Form\DbManage.Designer.cs">
+      <DependentUpon>DbManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V3Form\frmModelShop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V3Form\frmModelShop.Designer.cs">
+      <DependentUpon>frmModelShop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V3Form\frm_重命名分组.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V3Form\frm_重命名分组.designer.cs">
+      <DependentUpon>frm_重命名分组.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V3Form\TasKFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V3Form\TasKFrm.Designer.cs">
+      <DependentUpon>TasKFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V3Form\PointFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V3Form\PointFrm.Designer.cs">
+      <DependentUpon>PointFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V3Form\PointManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V3Form\PointManage.Designer.cs">
+      <DependentUpon>PointManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V3Form\SelectColor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V3Form\SelectColor.Designer.cs">
+      <DependentUpon>SelectColor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V3Form\ReplaceTag.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V3Form\ReplaceTag.Designer.cs">
+      <DependentUpon>ReplaceTag.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V3Form\ClassManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V3Form\ClassManage.Designer.cs">
+      <DependentUpon>ClassManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V3Form\PiLiangPointFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V3Form\PiLiangPointFrm.Designer.cs">
+      <DependentUpon>PiLiangPointFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V3Form\PiLiangTasKFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V3Form\PiLiangTasKFrm.Designer.cs">
+      <DependentUpon>PiLiangTasKFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V3Form\TaskStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V3Form\TaskStatus.Designer.cs">
+      <DependentUpon>TaskStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V3Form\TaskRunList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V3Form\TaskRunList.Designer.cs">
+      <DependentUpon>TaskRunList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V3Form\ModifyTasKFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V3Form\ModifyTasKFrm.Designer.cs">
+      <DependentUpon>ModifyTasKFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V3Form\DownLoadModel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V3Form\DownLoadModel.designer.cs">
+      <DependentUpon>DownLoadModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V3Form\SetIndex.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V3Form\SetIndex.Designer.cs">
+      <DependentUpon>SetIndex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V3Form\TestFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V3Form\TestFrm.Designer.cs">
+      <DependentUpon>TestFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V3Form\frm_gife.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V3Form\frm_gife.designer.cs">
+      <DependentUpon>frm_gife.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V3Form\发布方案\Pget.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V3Form\发布方案\Pget.Designer.cs">
+      <DependentUpon>Pget.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V3Form\发布方案\PostStp2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V3Form\发布方案\PostStp2.Designer.cs">
+      <DependentUpon>PostStp2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V3Form\发布方案\Ppost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V3Form\发布方案\Ppost.Designer.cs">
+      <DependentUpon>Ppost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V3Form\发布方案\UserInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V3Form\发布方案\UserInput.Designer.cs">
+      <DependentUpon>UserInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V3Form\发布方案\VcodeInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V3Form\发布方案\VcodeInput.Designer.cs">
+      <DependentUpon>VcodeInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V3Form\发布方案\UserAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V3Form\发布方案\UserAccount.Designer.cs">
+      <DependentUpon>UserAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V3Form\发布方案\PostStp1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V3Form\发布方案\PostStp1.Designer.cs">
+      <DependentUpon>PostStp1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V3Form\发布方案\PostStp3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V3Form\发布方案\PostStp3.Designer.cs">
+      <DependentUpon>PostStp3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V3Form\工具窗体\副本 frm_关键词工具.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V3Form\工具窗体\副本 frm_关键词工具.designer.cs">
+      <DependentUpon>副本 frm_关键词工具.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V3Form\工具窗体\框.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V3Form\工具窗体\框.Designer.cs">
+      <DependentUpon>框.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V3Form\抓取方案\frm_ChildRgxRules.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V3Form\抓取方案\frm_ChildRgxRules.Designer.cs">
+      <DependentUpon>frm_ChildRgxRules.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V3Form\发布方案\postPlan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V3Form\发布方案\postPlan.Designer.cs">
+      <DependentUpon>postPlan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V3Form\抓取方案\getPlan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V3Form\抓取方案\getPlan.Designer.cs">
+      <DependentUpon>getPlan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V3Form\抓取方案\stp1_keywordmodel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V3Form\抓取方案\stp1_keywordmodel.Designer.cs">
+      <DependentUpon>stp1_keywordmodel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V3Form\抓取方案\stp2_keywordmodel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V3Form\抓取方案\stp2_keywordmodel.Designer.cs">
+      <DependentUpon>stp2_keywordmodel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V3Form\抓取方案\stp3_Allmodel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V3Form\抓取方案\stp3_Allmodel.Designer.cs">
+      <DependentUpon>stp3_Allmodel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V3Form\抓取方案\PlanReadme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V3Form\抓取方案\PlanReadme.Designer.cs">
+      <DependentUpon>PlanReadme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V3Form\抓取方案\stp1_zidingyimodel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V3Form\抓取方案\stp1_zidingyimodel.Designer.cs">
+      <DependentUpon>stp1_zidingyimodel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V3Form\抓取方案\stp2_zidingyimodel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V3Form\抓取方案\stp2_zidingyimodel.Designer.cs">
+      <DependentUpon>stp2_zidingyimodel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V3Form\抓取方案\stp1_tongbumodel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V3Form\抓取方案\stp1_tongbumodel.Designer.cs">
+      <DependentUpon>stp1_tongbumodel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V3Form\抓取方案\stp1_spidergetmodel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V3Form\抓取方案\stp1_spidergetmodel.Designer.cs">
+      <DependentUpon>stp1_spidergetmodel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V3Form\抓取方案\frm_YuChuli.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V3Form\抓取方案\frm_YuChuli.Designer.cs">
+      <DependentUpon>frm_YuChuli.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V3Form\抓取方案\frm_Houchuli.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V3Form\抓取方案\frm_Houchuli.Designer.cs">
+      <DependentUpon>frm_Houchuli.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V3Form\数据相关窗体\frm_关键词库.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V3Form\数据相关窗体\frm_关键词库.Designer.cs">
+      <DependentUpon>frm_关键词库.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V3Form\数据相关窗体\frm_参数输入编辑器.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V3Form\数据相关窗体\frm_参数输入编辑器.Designer.cs">
+      <DependentUpon>frm_参数输入编辑器.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V3Form\数据相关窗体\frm_新增库.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V3Form\数据相关窗体\frm_新增库.Designer.cs">
+      <DependentUpon>frm_新增库.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V3Form\数据相关窗体\frm_文章导出导入工具.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V3Form\数据相关窗体\frm_文章导出导入工具.Designer.cs">
+      <DependentUpon>frm_文章导出导入工具.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V3Form\数据相关窗体\frm_文章库文章列表.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V3Form\数据相关窗体\frm_文章库文章列表.Designer.cs">
+      <DependentUpon>frm_文章库文章列表.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V3Form\数据相关窗体\frm_文章编辑器.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V3Form\数据相关窗体\frm_文章编辑器.Designer.cs">
+      <DependentUpon>frm_文章编辑器.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V3Form\数据相关窗体\frm_编辑哈希库.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V3Form\数据相关窗体\frm_编辑哈希库.Designer.cs">
+      <DependentUpon>frm_编辑哈希库.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V3Form\数据相关窗体\frm_替换库.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V3Form\数据相关窗体\frm_替换库.Designer.cs">
+      <DependentUpon>frm_替换库.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V3Form\数据相关窗体\frm_链接库.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V3Form\数据相关窗体\frm_链接库.Designer.cs">
+      <DependentUpon>frm_链接库.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V3Form\数据相关窗体\frm_重新选择分组.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V3Form\数据相关窗体\frm_重新选择分组.Designer.cs">
+      <DependentUpon>frm_重新选择分组.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V3Form\数据相关窗体\frm_重命名库.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V3Form\数据相关窗体\frm_重命名库.Designer.cs">
+      <DependentUpon>frm_重命名库.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V3Form\抓取方案\frm_ChildEngRules.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V3Form\抓取方案\frm_ChildEngRules.Designer.cs">
+      <DependentUpon>frm_ChildEngRules.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V3Form\抓取方案\frm_MainRules.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V3Form\抓取方案\frm_MainRules.Designer.cs">
+      <DependentUpon>frm_MainRules.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V3Form\getPostInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V3Form\getPostInfo.Designer.cs">
+      <DependentUpon>getPostInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V3Form\用户定制\用户%28id10865%29lianjie定制多项文章处理功能.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V3Form\用户定制\用户%28id10865%29lianjie定制多项文章处理功能.Designer.cs">
+      <DependentUpon>用户%28id10865%29lianjie定制多项文章处理功能.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V3Form\用户定制\settags.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V3Form\用户定制\settags.Designer.cs">
+      <DependentUpon>settags.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V3Form\用户定制\文档导入10870.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V3Form\用户定制\文档导入10870.Designer.cs">
+      <DependentUpon>文档导入10870.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V3Form\用户定制\文章末尾随机插入文章10818.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V3Form\用户定制\文章末尾随机插入文章10818.Designer.cs">
+      <DependentUpon>文章末尾随机插入文章10818.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V3Form\用户定制\用户%28id11750%29定制多项功能.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V3Form\用户定制\用户%28id11750%29定制多项功能.Designer.cs">
+      <DependentUpon>用户%28id11750%29定制多项功能.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V3Form\用户定制\用户%28id11750%29定制网站关键词提取.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V3Form\用户定制\用户%28id11750%29定制网站关键词提取.Designer.cs">
+      <DependentUpon>用户%28id11750%29定制网站关键词提取.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmExport.resx">
+      <DependentUpon>frmExport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HtmlEditor.resx">
+      <DependentUpon>HtmlEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyHtmlEdiror.resx">
+      <DependentUpon>MyHtmlEdiror.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="V3Form\give.resx">
+      <DependentUpon>give.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V3Form\SelectClass.resx">
+      <DependentUpon>SelectClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V3Form\Setting.resx">
+      <DependentUpon>Setting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V3Form\DbManage.resx">
+      <DependentUpon>DbManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V3Form\frmModelShop.resx">
+      <DependentUpon>frmModelShop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V3Form\frm_重命名分组.resx">
+      <DependentUpon>frm_重命名分组.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V3Form\TasKFrm.resx">
+      <DependentUpon>TasKFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V3Form\PointFrm.resx">
+      <DependentUpon>PointFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V3Form\PointManage.resx">
+      <DependentUpon>PointManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V3Form\SelectColor.resx">
+      <DependentUpon>SelectColor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V3Form\ReplaceTag.resx">
+      <DependentUpon>ReplaceTag.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V3Form\ClassManage.resx">
+      <DependentUpon>ClassManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V3Form\PiLiangPointFrm.resx">
+      <DependentUpon>PiLiangPointFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V3Form\PiLiangTasKFrm.resx">
+      <DependentUpon>PiLiangTasKFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V3Form\TaskStatus.resx">
+      <DependentUpon>TaskStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V3Form\TaskRunList.resx">
+      <DependentUpon>TaskRunList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V3Form\ModifyTasKFrm.resx">
+      <DependentUpon>ModifyTasKFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V3Form\DownLoadModel.resx">
+      <DependentUpon>DownLoadModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V3Form\SetIndex.resx">
+      <DependentUpon>SetIndex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V3Form\TestFrm.resx">
+      <DependentUpon>TestFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V3Form\frm_gife.resx">
+      <DependentUpon>frm_gife.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V3Form\发布方案\Pget.resx">
+      <DependentUpon>Pget.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V3Form\发布方案\PostStp2.resx">
+      <DependentUpon>PostStp2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V3Form\发布方案\Ppost.resx">
+      <DependentUpon>Ppost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V3Form\发布方案\UserInput.resx">
+      <DependentUpon>UserInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V3Form\发布方案\VcodeInput.resx">
+      <DependentUpon>VcodeInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V3Form\发布方案\UserAccount.resx">
+      <DependentUpon>UserAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V3Form\发布方案\PostStp1.resx">
+      <DependentUpon>PostStp1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V3Form\发布方案\PostStp3.resx">
+      <DependentUpon>PostStp3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V3Form\工具窗体\副本 frm_关键词工具.resx">
+      <DependentUpon>副本 frm_关键词工具.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V3Form\工具窗体\框.resx">
+      <DependentUpon>框.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V3Form\抓取方案\frm_ChildRgxRules.resx">
+      <DependentUpon>frm_ChildRgxRules.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V3Form\发布方案\postPlan.resx">
+      <DependentUpon>postPlan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V3Form\抓取方案\getPlan.resx">
+      <DependentUpon>getPlan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V3Form\抓取方案\stp1_keywordmodel.resx">
+      <DependentUpon>stp1_keywordmodel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V3Form\抓取方案\stp2_keywordmodel.resx">
+      <DependentUpon>stp2_keywordmodel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V3Form\抓取方案\stp3_Allmodel.resx">
+      <DependentUpon>stp3_Allmodel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V3Form\抓取方案\PlanReadme.resx">
+      <DependentUpon>PlanReadme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V3Form\抓取方案\stp1_zidingyimodel.resx">
+      <DependentUpon>stp1_zidingyimodel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V3Form\抓取方案\stp2_zidingyimodel.resx">
+      <DependentUpon>stp2_zidingyimodel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V3Form\抓取方案\stp1_tongbumodel.resx">
+      <DependentUpon>stp1_tongbumodel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V3Form\抓取方案\stp1_spidergetmodel.resx">
+      <DependentUpon>stp1_spidergetmodel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V3Form\抓取方案\frm_YuChuli.resx">
+      <DependentUpon>frm_YuChuli.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V3Form\抓取方案\frm_Houchuli.resx">
+      <DependentUpon>frm_Houchuli.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V3Form\数据相关窗体\frm_关键词库.resx">
+      <DependentUpon>frm_关键词库.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V3Form\数据相关窗体\frm_参数输入编辑器.resx">
+      <DependentUpon>frm_参数输入编辑器.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V3Form\数据相关窗体\frm_新增库.resx">
+      <DependentUpon>frm_新增库.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V3Form\数据相关窗体\frm_文章导出导入工具.resx">
+      <DependentUpon>frm_文章导出导入工具.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V3Form\数据相关窗体\frm_文章库文章列表.resx">
+      <DependentUpon>frm_文章库文章列表.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V3Form\数据相关窗体\frm_文章编辑器.resx">
+      <DependentUpon>frm_文章编辑器.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V3Form\数据相关窗体\frm_编辑哈希库.resx">
+      <DependentUpon>frm_编辑哈希库.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V3Form\数据相关窗体\frm_替换库.resx">
+      <DependentUpon>frm_替换库.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V3Form\数据相关窗体\frm_链接库.resx">
+      <DependentUpon>frm_链接库.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V3Form\数据相关窗体\frm_重新选择分组.resx">
+      <DependentUpon>frm_重新选择分组.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V3Form\数据相关窗体\frm_重命名库.resx">
+      <DependentUpon>frm_重命名库.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V3Form\抓取方案\frm_ChildEngRules.resx">
+      <DependentUpon>frm_ChildEngRules.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V3Form\抓取方案\frm_MainRules.resx">
+      <DependentUpon>frm_MainRules.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V3Form\getPostInfo.resx">
+      <DependentUpon>getPostInfo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V3Form\用户定制\用户%28id10865%29lianjie定制多项文章处理功能.resx">
+      <DependentUpon>用户%28id10865%29lianjie定制多项文章处理功能.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V3Form\用户定制\settags.resx">
+      <DependentUpon>settags.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V3Form\用户定制\文档导入10870.resx">
+      <DependentUpon>文档导入10870.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V3Form\用户定制\文章末尾随机插入文章10818.resx">
+      <DependentUpon>文章末尾随机插入文章10818.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V3Form\用户定制\用户%28id11750%29定制多项功能.resx">
+      <DependentUpon>用户%28id11750%29定制多项功能.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V3Form\用户定制\用户%28id11750%29定制网站关键词提取.resx">
+      <DependentUpon>用户%28id11750%29定制网站关键词提取.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="mysdk.snk" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Resources\get.x" />
+    <None Include="Resources\post.x" />
+    <None Include="xiaoxia.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="myico.ico" />
+    <None Include="Resources\btn_module_input.png" />
+    <None Include="Resources\btn_module_output.png" />
+    <None Include="Resources\btn_modify.png" />
+    <None Include="Resources\btn_upload.png" />
+    <None Include="Resources\shop.png" />
+    <None Include="Resources\template2.png" />
+    <None Include="Resources\template1.png" />
+    <None Include="Resources\btn_cancel.png" />
+    <None Include="Resources\btn_save.png" />
+    <None Include="Resources\page_next.png" />
+    <None Include="Resources\page_pre.png" />
+    <None Include="Resources\db_view.png" />
+    <None Include="Resources\db_delete.png" />
+    <None Include="Resources\db_add.png" />
+    <None Include="Resources\refresh.png" />
+    <None Include="Resources\onlinehelp.png" />
+    <None Include="Resources\bbs_big.png" />
+    <None Include="Resources\video.png" />
+    <None Include="Resources\article_input.png" />
+    <None Include="Resources\task_system.png" />
+    <None Include="Resources\database_articles.png" />
+    <None Include="Resources\database_article.png" />
+    <None Include="Resources\database_hash.png" />
+    <None Include="Resources\database_keyword.png" />
+    <None Include="Resources\database_link.png" />
+    <None Include="Resources\database_replease.png" />
+    <None Include="Resources\database_danger.png" />
+    <None Include="Resources\outputpoint.png" />
+    <None Include="Resources\task_modify.png" />
+    <None Include="Resources\tasks.png" />
+    <None Include="Resources\points.png" />
+    <None Include="Resources\online.png" />
+    <None Include="Resources\bbs.png" />
+    <None Include="Resources\myico.ico" />
+    <None Include="Resources\logo.ico" />
+    <None Include="Resources\task.png" />
+    <None Include="Resources\point1.png" />
+    <None Include="Resources\point.png" />
+    <None Include="Resources\loginbg.png" />
+    <None Include="Resources\loginbtn.png" />
+    <None Include="Resources\my-account %285%29.png" />
+    <None Include="Resources\videohive 16_16.png" />
+    <None Include="Resources\female-user.png" />
+    <None Include="Resources\12N3M441160-2N263.png" />
+    <None Include="Resources\administrative-docs %283%29.png" />
+    <None Include="Resources\%2803,29%29.png" />
+    <None Include="Resources\archives %2810%29.png" />
+    <None Include="Resources\layers_2 %286%29.png" />
+    <None Include="Resources\process %283%29.png" />
+    <None Include="Resources\cpu2.png" />
+    <None Include="Resources\Memory.png" />
+    <None Include="Resources\stop.png" />
+    <None Include="Resources\report_word.png" />
+    <None Include="Resources\report_magnify.png" />
+    <None Include="Resources\report_link.png" />
+    <None Include="Resources\monitor.png" />
+    <None Include="Resources\door_in.png" />
+    <None Include="Resources\control_play_blue.png" />
+    <None Include="Resources\connect.png" />
+    <None Include="Resources\cancel.png" />
+    <None Include="Resources\arrow_undo.png" />
+    <None Include="Resources\arrow_turn_left.png" />
+    <None Include="Resources\arrow_rotate_clockwise.png" />
+    <None Include="Resources\arrow_rotate_anticlockwise.png" />
+    <None Include="Resources\arrow_right.png" />
+    <None Include="Resources\arrow_redo.png" />
+    <None Include="Resources\arrow_left.png" />
+    <None Include="Resources\add.png" />
+    <None Include="Resources\Button Help.png" />
+    <None Include="Resources\collaboration %284%29.png" />
+    <None Include="Resources\alert %2812%29.png" />
+    <None Include="Resources\私有 抓取模块.png" />
+    <None Include="Resources\停止中.png" />
+    <None Include="Resources\暂停中.png" />
+    <None Include="Resources\通用发布模块.png" />
+    <None Include="Resources\私有 发布模块.png" />
+    <None Include="Resources\关键字智能抓取.png" />
+    <None Include="Resources\共享 抓取模块.png" />
+    <None Include="Resources\共享 发布模块.png" />
+    <None Include="Resources\自定义抓取模式.png" />
+    <None Include="Resources\蜘蛛爬行模式.png" />
+    <None Include="Resources\运行中-抓取.png" />
+    <None Include="Resources\运行中-发布.png" />
+    <None Include="Resources\休眠中.png" />
+    <None Include="Resources\同步追踪模式.png" />
+    <None Include="Resources\自定义抓取.png" />
+    <None Include="Resources\蜘蛛爬行抓取.png" />
+    <None Include="Resources\同步追踪抓取.png" />
+    <None Include="Resources\私有抓取模块.png" />
+    <None Include="Resources\私有发布模块.png" />
+    <None Include="Resources\共享抓取模块.png" />
+    <None Include="Resources\共享发布模块.png" />
+    <None Include="Resources\pic.png" />
+    <None Include="Resources\32.gif" />
+    <None Include="Resources\45.gif" />
+    <None Include="Resources\31.gif" />
+    <None Include="Resources\18.gif" />
+    <None Include="Resources\6.gif" />
+    <None Include="Resources\52.gif" />
+    <None Include="Resources\成功.bmp" />
+    <None Include="Resources\dollar-prices_16x16.png" />
+    <None Include="Resources\cd-burn_16x16.png" />
+    <None Include="Resources\documents_16x16.png" />
+    <None Include="Resources\internet_16x16.png" />
+    <None Include="Resources\connect_16x16.png" />
+    <None Include="Resources\favorite.png" />
+    <None Include="Resources\add-favorite.png" />
+    <None Include="Resources\web.png" />
+    <None Include="Resources\sign-stop.png" />
+    <None Include="Resources\rigth16x16 24-bit.png" />
+    <None Include="Resources\nav-right.png" />
+    <None Include="Resources\mdiback.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\公共库\xStoreAPI\xStoreAPI.csproj">
+      <Project>{48AB4B03-5A28-4EAC-AD82-0F7552C971A7}</Project>
+      <Name>xStoreAPI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\V3Model\V3Model.csproj">
+      <Project>{61F5628A-F344-4C86-9232-A7A7D410A6CD}</Project>
+      <Name>V3Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="XFile\XFile.csproj">
+      <Project>{9300007A-9624-4A8E-BF1D-F191DFF62865}</Project>
+      <Name>XFile</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="SHDocVw">
+      <Guid>{EAB22AC0-30C1-11CF-A7EB-0000C05BAE0B}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>1</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

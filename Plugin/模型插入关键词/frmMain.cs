@@ -1,0 +1,19 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Drawing;
+using System.Data;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+
+namespace 模型插入关键词
+{
+    public partial class frmMain : UserControl
+    {
+        public frmMain()
+        {
+            InitializeComponent();
+        }
+    }
+}
