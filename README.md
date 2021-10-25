@@ -6,6 +6,8 @@ https://github.com/xksoft/v3/releases/download/%E4%B8%BB%E7%A8%8B%E5%BA%8F/Relea
 如不能正常启动请先安装.NET Framework 4.6
 https://download.microsoft.com/download/C/3/A/C3A5200B-D33C-47E9-9D70-2F7C65DAAD94/NDP46-KB3045557-x86-x64-AllOS-ENU.exe
 
+微信交流群
+![image](https://user-images.githubusercontent.com/24860541/138666730-17bb1933-26fb-4a0c-9cb3-282e4887a340.png)
 
 
 # 项目源码
