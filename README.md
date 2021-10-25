@@ -3,3 +3,6 @@
 Visual Studio 2019
 ## .NET版本
 .NET Framework 4.6
+## 老数据转移
+老站点数据可直接复制到目录下的“系统数据//Main”中，复制完成启动后需要修改站点和任务信息，重新设置采集和发布模块。老模块可使用导入导出的方式添加到新版本中
+![image](https://user-images.githubusercontent.com/24860541/138664082-b62aa07b-fa20-4e73-8761-6ec62a349e9b.png)
