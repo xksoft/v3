@@ -1,5 +1,4 @@
 # V3主程序
-## 说明
 模块本地化存储，无授权验证，可直接下载运行。
 
 https://github.com/xksoft/v3/releases/download/%E4%B8%BB%E7%A8%8B%E5%BA%8F/Release.zip
