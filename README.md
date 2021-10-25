@@ -7,9 +7,7 @@ https://github.com/xksoft/v3/releases/download/%E4%B8%BB%E7%A8%8B%E5%BA%8F/Relea
 
 https://download.microsoft.com/download/C/3/A/C3A5200B-D33C-47E9-9D70-2F7C65DAAD94/NDP46-KB3045557-x86-x64-AllOS-ENU.exe
 
-侠客交流群
-
-![image](https://user-images.githubusercontent.com/24860541/138666730-17bb1933-26fb-4a0c-9cb3-282e4887a340.png)
+![image](https://user-images.githubusercontent.com/24860541/138667655-eb3f7514-bcc4-4a40-ba34-67bec655ed85.png)
 
 ## 老数据转移
 老站点数据可直接复制到目录下的“系统数据//Main”中，复制完成启动后需要修改站点和任务信息，重新设置采集和发布模块。老模块可使用导入导出的方式添加到新版本中
