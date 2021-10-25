@@ -95,76 +95,7 @@ namespace V3.V3Form.抓取模块
             }
         }
         //更新模块的方法
-        void ModifyModelBase(object mbb)
-        {
-            showI("正在提交到服务器...");
-            Model.ModelBase mb = (Model.ModelBase)mbb;
-            string result = V3.Common.ModelShopBll.ModifyModelBase(mb);
-            if (result != "OK")
-            {
-                issave = false;
-                closeI();
-                try
-                {
-                    this.Invoke((EventHandler)(delegate
-                    {
-                        XtraMessageBox.Show("更新模块失败，原因：" + result, "更新失败", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }));
-                }
-                catch { }
-            }
-            else
-            {
-                issave = true;
-                closeI();
-               
-                Model.V3Infos.MainDb.MyModels[mb.id] = (Model.GetPostModel)xEngine.Common.XSerializable.BytesToObject<Model.GetPostModel>(Base32.FromBase32String(mb.Data));
-                this.Invoke((EventHandler)(delegate
-                {
-                    this.Close();
-                }));
-            }
-
-
-        }
-        private void ModifeModel(Model.GetPostModel model)
-        {
-            Model.ModelBase mbmodel = V3.Common.ModelShopBll.GetModelbase(model);
-            mbmodel.id = model.mids;
-            this.Activate();
-            System.Threading.Thread t = new System.Threading.Thread(ModifyModelBase);
-            t.IsBackground = true;
-            t.Start(mbmodel);
-        }
-        //上传方法
-        private void AddModelBase(object object1)
-        {
-            showI("正在提交到服务器，请稍后...");
-            Model.GetPostModel tempmodel = (Model.GetPostModel)object1;
-            tempmodel.uid = Convert.ToInt32(99);
-            if (V3.Common.ModelShopBll.UploadModel(tempmodel) == "OK")
-            {
-                closeI();
-                issave = true;
-
-                this.Invoke((EventHandler)(delegate
-                {
-                    XtraMessageBox.Show("模块成功上传到服务器，在模块市场中点击“同步模块市场信息”即可在<color=red>我的模块</color>中查看并使用它！", "上传成功",
-                        MessageBoxButtons.OK, MessageBoxIcon.Information, DefaultBoolean.True);
-                    this.Close();
-                }));
-            }
-            else
-            {
-                closeI();
-                this.Invoke((EventHandler)(delegate
-                {
-                    XtraMessageBox.Show("模块上传失败！\r\n\r\n1：检查自己的网络环境是否通畅并重新提交\r\n2：不要关闭该窗口，联系在线客服帮您解决", "上传失败",
-                        MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }));
-                issave = false;
-            }
-        }
+       
 
         private void btn_step1_Click(object sender, EventArgs e)
         {

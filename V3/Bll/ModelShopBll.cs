@@ -137,84 +137,7 @@ namespace V3.Common
             //}
             return result;
         }
-        //上传模块
-        public static string UploadModel(Model.GetPostModel model)
-        {
-            xEngine.Model.Command cmd = new xEngine.Model.Command();
-            cmd.Action = "1";
-            cmd.Number1 = 99;
-            cmd.Bytes1 = xEngine.Common.XSerializable.ObjectToBytes(V3.Common.ModelShopBll.GetModelbase(model));
-            try
-            {
-                cmd = Common.Command.RunCommand(cmd, Program.ServerUrl);
-                if (cmd.IsOk)
-                {
-                    Model.ModelBase mb = xEngine.Common.XSerializable.BytesToObject<Model.ModelBase>(cmd.Bytes1);
-                   Model.V3Infos.MainDb.MyModels.Add(mb.id,GetModelbyBase(mb));
-                    ReSortMymodel();
-                    return "OK";
-                }
-                else
-                {
-                    return cmd.String1;
-                }
-            }
-            catch
-            {
-                return "服务器内部错误，请通知客服处理！";
-            }
-        }
-        //删除指定模块
-        public static string DelMymodel(int modelid)
-        {
-            //xEngine.Model.Command cmd = new xEngine.Model.Command();
-            //cmd.Action = "2";
-            //cmd.Number1 = 99;
-            //cmd.Bytes1 =xEngine.Common.XSerializable.ObjectToBytes(V3.Common.ModelShopBll.GetModelbase(Model.V3Infos.MainDb.MyModel[modelid]));
-            //try
-            //{
-            //    cmd =Common.Command.RunCommand(cmd, Program.ServerUrl);
-            //    if (cmd.IsOk)
-            //    {
-            //        return "OK";
-            //    }
-            //    else
-            //    {
-            //        return cmd.String1 ;
-
-            //    }
-            //}
-            //catch
-            //{
-            //    return "服务器返回信息错误！";
-            //}
-            return "";
-        }
-        //修改指定模块
-        public static string ModifyModelBase(Model.ModelBase model)
-        {
-            xEngine.Model.Command cmd = new xEngine.Model.Command();
-            cmd.Action = "3";
-            cmd.Number1 = 99;
-            cmd.Bytes1 = xEngine.Common.XSerializable.ObjectToBytes(model);
-            try
-            {
-                cmd = Common.Command.RunCommand(cmd, Program.ServerUrl);
-                if (cmd.IsOk)
-                {
-                    return "OK";
-                }
-                else
-                {
-                    return cmd.String1;
-
-                }
-            }
-            catch
-            {
-                return "服务器返回信息错误！";
-            }
-        }
+       
         //把getpostmodel转成modelbase
         public static Model.ModelBase GetModelbase(Model.GetPostModel tempmodel)
         {
@@ -297,58 +220,6 @@ namespace V3.Common
             Model.V3Infos.MainDb.MyModels = tempsss;
             
         }
-        //购买指定模块
-        public static string BuyModelBase(Model.ModelBase model)
-        {
-
-            xEngine.Model.Command cmd = new xEngine.Model.Command();
-            cmd.Action = "4";
-            cmd.Number1 = 99;
-            cmd.Bytes1 = xEngine.Common.XSerializable.ObjectToBytes(model);
-            try
-            {
-                cmd = Common.Command.RunCommand(cmd, Program.ServerUrl);
-                if (cmd.IsOk)
-                {
-                    Model.GetPostModel tmodel = GetModelbyBase(xEngine.Common.XSerializable.BytesToObject<Model.ModelBase>(cmd.Bytes1));
-                    Model.V3Infos.MainDb.MyModels.Add(tmodel.mids, tmodel);
-                    return "OK";
-                }
-                else
-                {
-                    return cmd.String1 ;
-                }
-            }
-            catch
-            {
-                return "服务器返回信息错误！";
-            }
-        }
-
-        //赠送指定模块
-        public static string GifeModelBase(int gifeuserid,int modelid)
-        {
-            xEngine.Model.Command cmd = new xEngine.Model.Command();
-            cmd.Action = "5";
-            cmd.Number1 = 99;
-            cmd.Number2 = modelid;
-            cmd.Number3 = gifeuserid;
-            try
-            {
-                cmd = Common.Command.RunCommand(cmd, Program.ServerUrl);
-                if (cmd.IsOk)
-                {
-                    return "OK";
-                }
-                else
-                {
-                    return cmd.String1 ;
-                }
-            }
-            catch
-            {
-                return "服务器返回信息错误！";
-            }
-        }
+      
     }
 }

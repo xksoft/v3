@@ -72,75 +72,9 @@ namespace V3.V3Form.发布模块
             labUpdate.Text = Model.UpdateTime;
             txtAdminUrl.Text = Model.Testadminurl;
         }
-        private void AddModelBase(object object1)
-        {
-            ShowI("正在提交到服务器，请稍后...");
-            Model.GetPostModel tempmodel = (Model.GetPostModel)object1;
-            tempmodel.uid = Convert.ToInt32(99);
-            if (V3.Common.ModelShopBll.UploadModel(tempmodel) == "OK")
-            {
-                CloseI();
-                Issave = true;
-                this.Invoke((EventHandler)(delegate
-                {
-                    XtraMessageBox.Show("模块成功上传到服务器，在模块市场中点击“同步模块市场信息”即可在<color=red>我的模块</color>中查看并使用它！", "上传成功", MessageBoxButtons.OK, MessageBoxIcon.Information, DefaultBoolean.True);
-                    this.Close();
-                }));
-            }
-            else
-            {
-                CloseI();
-                this.Invoke((EventHandler)(delegate
-                {
-                    XtraMessageBox.Show("模块上传失败！\r\n\r\n1：检查自己的网络环境是否通畅并重新提交\r\n2：不要关闭该窗口，联系在线客服帮您解决", "上传失败",
-                        MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }));
-                Issave = false;
-            }
-        }
-        //更新模块方法
-        private void ModifeModel(Model.GetPostModel model)
-        {
-            Model.ModelBase mbmodel = V3.Common.ModelShopBll.GetModelbase(model);
-            mbmodel.id = model.mids;
-            this.Activate();
-            System.Threading.Thread t = new System.Threading.Thread(ModifyModelBase);
-            t.IsBackground = true;
-            t.Start(mbmodel);
-        }
-        //更新模块的方法
-        void ModifyModelBase(object mbb)
-        {
-            ShowI("正在提交更新到服务器，请稍后...");
-            Model.ModelBase mb = (Model.ModelBase)mbb;
-            string result = V3.Common.ModelShopBll.ModifyModelBase(mb);
-            if (result != "OK")
-            {
-                CloseI();
-                try
-                {
-                    this.Invoke((EventHandler)(delegate
-                    {
-
-
-                        XtraMessageBox.Show("模块更新失败，原因：" + result + "\r\n\r\n1：检查自己是否有权限修改该模块\r\n2：检查自己的网络环境是否通畅并重新提交\r\n3：不要关闭该窗口，联系在线客服帮您解决", "更新失败",
-                       MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }));
-                }
-                catch { }
-            }
-            else
-            {
-                CloseI();
-                global::Model.V3Infos.MainDb.MyModels[mb.id] = xEngine.Common.XSerializable.BytesToObject<GetPostModel>(Base32.FromBase32String(mb.Data));
-                this.Invoke((EventHandler)(delegate
-                {
-                    this.Close();
-                }));
-            }
-
-
-        }
+      
+      
+      
         private void btn_step1_Click(object sender, EventArgs e)
         {
            
@@ -196,42 +130,7 @@ namespace V3.V3Form.发布模块
            
         }
       
-        private void btn_upload_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            SetInfo();
-            if (Model.PlanName.Length == 0)
-            {
-                Issave = false;
-                XtraMessageBox.Show("请在<color=red>模块基本信息</color>中设置模块名称！", "信息不完整", MessageBoxButtons.OK, MessageBoxIcon.Information, DefaultBoolean.True);
-                btn_modify_ItemClick(null, null);
-                return;
-            }
-            //else if (model)
-            //{
-
-            //}
-            if (Model.mids == "")
-            {
-                System.Threading.Thread t = new System.Threading.Thread(AddModelBase);
-                t.IsBackground = true;
-                t.Start(Model);
-            }
-            else
-            {
-                if (!IsMymodel)
-                {
-                    Issave = false;
-                    XtraMessageBox.Show("您正在编辑其他人的模块，您可以修改后<color=red>保存在本地</color>并使用它，但无法提交到平台！\r\n\r\n点击“保存在本地”即可应用修改，若想再次使用原模块请在模块市场中点击“同步模块市场信息”", "提示",
-                        MessageBoxButtons.OK, MessageBoxIcon.Information, DefaultBoolean.True);
-                    return;
-                }
-                else
-                {
-                    ModifeModel(Model);
-                }
-            }
-
-        }
+       
       
         private void btn_save_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {

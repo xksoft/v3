@@ -339,34 +339,7 @@ namespace V3.V3Form
 
           
         }
-        public void BuyModel(object mbb)
-        {
-            ShowI("获取模块中...");
-           Model.ModelBase mb = (Model.ModelBase)mbb;
-            string result = V3.Common.ModelShopBll.BuyModelBase(mb);
-            if (result != "OK")
-            {
-                CloseI();
-                try
-                {
-                    this.Invoke((EventHandler)(delegate
-                    {
-                        DevExpress.XtraEditors.XtraMessageBox.Show("购买模块失败，原因：" + result, "购买失败", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }));
-                }
-                catch { }
-            }
-            else
-            {
-                CloseI();
-                this.Invoke((EventHandler) (delegate
-                {
-                    DevExpress.XtraEditors.XtraMessageBox.Show("成功购买模块，可在“我的模块”中查看并使用！", "购买成功", MessageBoxButtons.OK,
-                        MessageBoxIcon.Information);
-                }));ReloadModel(false);
-            }
-        }
-     
+      
         //将我的模块显示到界面
         public void LoadMylist()
         {

@@ -26,7 +26,6 @@ namespace V3
         public static V3Form.frmPoint f_frmPoint;
         public static V3Form.frmTasks_Modify f_frmTasks_Modify;
         public static  ArrayList TaskRunList=new ArrayList();
-        internal static string ServerUrl = "http://vip.banshan.cc:9988/api.ashx";
         internal static int Level = 9999;
         public static string[] Args = null;
         public static List<string> ProxyList = new List<string>();
