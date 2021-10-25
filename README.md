@@ -1,6 +1,6 @@
 # V3主程序
 ## 说明
-模块本地化存储，无任何授权验证，可直接下载运行。如不能正常启动请先安装.NET Framework 4.6
+模块本地化存储，无授权验证，可直接下载运行。如不能正常启动请先安装.NET Framework 4.6
 https://download.microsoft.com/download/C/3/A/C3A5200B-D33C-47E9-9D70-2F7C65DAAD94/NDP46-KB3045557-x86-x64-AllOS-ENU.exe
 ## 可执行程序下载地址
 https://github.com/xksoft/v3/releases/download/%E4%B8%BB%E7%A8%8B%E5%BA%8F/Release.zip
