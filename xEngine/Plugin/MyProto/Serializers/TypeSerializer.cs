@@ -233,6 +233,7 @@ namespace MyProto.Serializers
                 {
                     if (_fieldNumbers[i] == fieldNumber)
                     {
+                      
                         var ser = _serializers[i];
                         //Helpers.DebugWriteLine(": " + ser.ToString());
                         var serType = ser.ExpectedType;
@@ -263,7 +264,7 @@ namespace MyProto.Serializers
                             // pop
                             ser.Read(value, source);
                         }
-
+  //Console.WriteLine("序列化："+fieldNumber.ToString());
                         lastFieldIndex = i;
                         lastFieldNumber = fieldNumber;
                         fieldHandled = true;

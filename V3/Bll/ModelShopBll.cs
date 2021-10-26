@@ -172,7 +172,7 @@ namespace V3.Common
            
             mbmodel.Description = tempmodel.PlanDescripton;
             mbmodel.DesignName = "用户";
-            mbmodel.id = tempmodel.mids;
+            mbmodel.ids = tempmodel.mids;
             return mbmodel;
         }
         public static Model.GetPostModel GetModelbyBase(Model.ModelBase mbmodel)
@@ -201,7 +201,7 @@ namespace V3.Common
             tempmodel.UpdateTime = mbmodel.UpdateTime.ToString();
             tempmodel.PlanUrl = mbmodel.Url;
             tempmodel.PlanDescripton = mbmodel.Description;
-            tempmodel.mids = mbmodel.id;
+            tempmodel.mids = mbmodel.ids;
             return tempmodel;
         }
       

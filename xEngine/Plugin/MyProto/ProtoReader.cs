@@ -29,7 +29,10 @@ namespace MyProto
         /// <summary>
         ///     Gets the number of the field being processed.
         /// </summary>
-        public int FieldNumber { get; private set; }
+        public int FieldNumber { 
+            get; 
+            private set;
+        }
 
         /// <summary>
         ///     Indicates the underlying proto serialization format on the wire.
@@ -82,6 +85,7 @@ namespace MyProto
         /// <param name="length">The number of bytes to read, or -1 to read until the end of the stream</param>
         public ProtoReader(Stream source, TypeModel model, SerializationContext context, int length)
         {
+           
             if (source == null) throw new ArgumentNullException("source");
             if (!source.CanRead) throw new ArgumentException("Cannot read from stream", "source");
             _source = source;
@@ -550,6 +554,7 @@ namespace MyProto
                 _ioIndex += bytes;
                 return s;
             }
+            
             throw CreateWireTypeException();
         }
 
@@ -564,6 +569,7 @@ namespace MyProto
 
         private Exception CreateWireTypeException()
         {
+
             return
                 CreateException(
                     "Invalid wire-type; this usually means you have over-written a file without truncating or setting the length");

@@ -63,6 +63,14 @@ namespace V3.Common
                 else
                 {
                     Model.V3Infos.MainDb = xEngine.Common.XSerializable.CloneObject<Model.Model_V3Setting>(temp);
+                    if (Model.V3Infos.MainDb.MyModels.Count==0&& Model.V3Infos.MainDb.MyModel.Count>0) 
+                    {
+                        for (int i=0;i< Model.V3Infos.MainDb.MyModel.Count;i++) {
+                            var model = Model.V3Infos.MainDb.MyModel[Model.V3Infos.MainDb.MyModel.Keys.ToList()[i]];
+                            model.mids = Model.V3Infos.MainDb.MyModel.Keys.ToList()[i].ToString();
+                            Model.V3Infos.MainDb.MyModels.Add(model.mids, model);
+                        }
+                    }
                 }
                 V3.Common.Log.LogNewline("[c11]正在加载伪原创库...[/c]");
 

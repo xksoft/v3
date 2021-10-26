@@ -11,7 +11,8 @@ namespace Model
     public partial class ModelBase
     {
         #region Model
-        private String _id;
+        private int _id;
+        private string _ids;
         private string _name;
         private int _type;
         private string _readme;
@@ -33,10 +34,16 @@ namespace Model
         /// 
         /// </summary>
           [ProtoMember(2)]
-        public String id
+        public int id
         {
             set { _id = value; }
             get { return _id; }
+        }
+
+        [ProtoMember(13)]
+        public string ids {
+            set { _ids = value; }
+            get { return _ids; }
         }
         /// <summary>
         /// 

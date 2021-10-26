@@ -307,9 +307,9 @@ namespace Model
             set { myModel = value; }
         }
 
-        private Dictionary<String, Model.GetPostModel> myModels = new Dictionary<String, Model.GetPostModel>();
+        private Dictionary<string, Model.GetPostModel> myModels = new Dictionary<string, Model.GetPostModel>();
         [ProtoMember(48)]
-        public Dictionary<String, Model.GetPostModel> MyModels
+        public Dictionary<string, Model.GetPostModel> MyModels
         {
             get { return myModels; }
             set { myModels = value; }
