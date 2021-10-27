@@ -164,10 +164,13 @@ namespace 模型插入关键词
             get
             {
                 string[] s = new string[] { "开头", "1", "2", "开头", "1", "2", "开头", "1", "2", "开头", "1", "2" };
-                //frm.comboBox_title.SelectedIndex = 0;
-                //frm.comboBox_keyword.SelectedIndex = 0;
-                //frm.comboBox_des.SelectedIndex = 0;
-                //frm.comboBox_content.SelectedIndex = 0;
+                if (frm.comboBox_title.SelectedItem==null|| frm.comboBox_keyword.SelectedItem==null || frm.comboBox_des.SelectedItem==null || frm.comboBox_content.SelectedItem==null) {
+                    frm.comboBox_title.SelectedIndex = 0;
+                    frm.comboBox_keyword.SelectedIndex = 0;
+                    frm.comboBox_des.SelectedIndex = 0;
+                    frm.comboBox_content.SelectedIndex = 0;
+                }
+             
 
                 s[0] = frm.comboBox_title.SelectedItem.ToString();
                 s[1] = frm.textBox_title_from.Text;
