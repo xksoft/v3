@@ -56,10 +56,11 @@ namespace V3.V3Form.发布模块
             {
                 Model.Stp1_POST_LoginAction = new GetPostAction[0];
                 Model.Stp1_POST_NeedLogin = true;
-                Model.Stp1_POST_Truetag = new string[0];
-                Model.Stp1_POST_Falsetag = new string[0];
+              
                
             }
+            if (Model.Stp1_POST_Truetag == null) { Model.Stp1_POST_Truetag = new string[0]; }
+            if (Model.Stp1_POST_Falsetag == null) { Model.Stp1_POST_Falsetag = new string[0]; }
             if (Model.Zidingyi_Stp3_GET_Rules == null)
             {
                 Model.Zidingyi_Stp3_GET_Rules = new FinalRules[0];
@@ -67,11 +68,11 @@ namespace V3.V3Form.发布模块
             if (Model.Stp3_POST_SendAction == null)
             {
                 Model.Stp3_POST_SendAction = new GetPostAction[0];
-                Model.Stp3_POST_Falsetag = new string[0];
-                Model.Stp3_POST_Truetag = new string[0];
-                Model.Stp3_POST_MakeHtmlUrls = new string[0];
+               
             }
-            
+            if (Model.Stp3_POST_Falsetag==null) { Model.Stp3_POST_Falsetag = new string[0]; }
+            if (Model.Stp3_POST_Truetag == null) { Model.Stp3_POST_Truetag = new string[0]; }
+            if (Model.Stp3_POST_MakeHtmlUrls == null) { Model.Stp3_POST_MakeHtmlUrls = new string[0]; }
             labPlanDesign.Text = Model.PlanDesignName;
             labPlanName.Text = Model.PlanName;
             labPlanReadme.Text = Model.PlanReadme;
