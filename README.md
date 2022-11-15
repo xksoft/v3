@@ -6,9 +6,10 @@
 ![image](https://user-images.githubusercontent.com/24860541/138667655-eb3f7514-bcc4-4a40-ba34-67bec655ed85.png)
 
 ## 老数据转移
-老站点数据可直接复制并覆盖到新程序目录下的“系统数据//Main”中，复制完成启动后需要修改站点和任务信息，重新设置采集和发布模块。个人现有的老发布和采集模块会自动导入。
+老V3站点、任务、模块、库数据可直接转移，复制老V3目录下的“系统数据”然后覆盖到新程序目录下的“系统数据”文件夹，覆盖完成启动后需要修改站点和任务信息，重新设置采集和发布模块。个人原有的老发布和采集模块会自动导入。
 
-![image](https://user-images.githubusercontent.com/24860541/138805936-26196197-cb5b-4eef-aa53-41354b32de0a.png)
+![image](https://user-images.githubusercontent.com/24860541/141955497-a9a209d3-acd5-472a-9796-ce50bbcb26d5.png)
+
 
 
 # 项目源码
