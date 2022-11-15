@@ -295,7 +295,6 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txturl.Location = new System.Drawing.Point(135, 28);
             this.txturl.Name = "txturl";
-            this.txturl.Properties.NullValuePrompt = "请输入那些经常更新的页面地址列表，一行一个...";
             this.txturl.Size = new System.Drawing.Size(817, 99);
             this.txturl.TabIndex = 12;
             this.txturl.UseOptimizedRendering = true;

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30204.135
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33103.184
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "V3", "V3\V3.csproj", "{A5E8C372-8235-4F13-9865-F34303F17E61}"
 EndProject
@@ -26,6 +26,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "视频图片插入", "Plugin\视频图片插入\视频图片插入.csproj", "{C00FAA32-AEAF-435A-848C-C171E0BD4277}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xEngine", "xEngine\xEngine.csproj", "{F928FE1D-7C8F-4DC7-B98A-ABFC709B2A91}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "百度翻译", "Plugin\百度翻译\百度翻译.csproj", "{45AEC823-F72A-4C69-952C-CF883B79C5F9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -271,6 +273,30 @@ Global
 		{F928FE1D-7C8F-4DC7-B98A-ABFC709B2A91}.最终发布|Mixed Platforms.Build.0 = Release|x86
 		{F928FE1D-7C8F-4DC7-B98A-ABFC709B2A91}.最终发布|x86.ActiveCfg = Release|x86
 		{F928FE1D-7C8F-4DC7-B98A-ABFC709B2A91}.最终发布|x86.Build.0 = Release|x86
+		{45AEC823-F72A-4C69-952C-CF883B79C5F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45AEC823-F72A-4C69-952C-CF883B79C5F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45AEC823-F72A-4C69-952C-CF883B79C5F9}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{45AEC823-F72A-4C69-952C-CF883B79C5F9}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{45AEC823-F72A-4C69-952C-CF883B79C5F9}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{45AEC823-F72A-4C69-952C-CF883B79C5F9}.Debug|x86.Build.0 = Debug|Any CPU
+		{45AEC823-F72A-4C69-952C-CF883B79C5F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45AEC823-F72A-4C69-952C-CF883B79C5F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45AEC823-F72A-4C69-952C-CF883B79C5F9}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{45AEC823-F72A-4C69-952C-CF883B79C5F9}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{45AEC823-F72A-4C69-952C-CF883B79C5F9}.Release|x86.ActiveCfg = Release|Any CPU
+		{45AEC823-F72A-4C69-952C-CF883B79C5F9}.Release|x86.Build.0 = Release|Any CPU
+		{45AEC823-F72A-4C69-952C-CF883B79C5F9}.本地调试|Any CPU.ActiveCfg = Debug|Any CPU
+		{45AEC823-F72A-4C69-952C-CF883B79C5F9}.本地调试|Any CPU.Build.0 = Debug|Any CPU
+		{45AEC823-F72A-4C69-952C-CF883B79C5F9}.本地调试|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{45AEC823-F72A-4C69-952C-CF883B79C5F9}.本地调试|Mixed Platforms.Build.0 = Debug|Any CPU
+		{45AEC823-F72A-4C69-952C-CF883B79C5F9}.本地调试|x86.ActiveCfg = Debug|Any CPU
+		{45AEC823-F72A-4C69-952C-CF883B79C5F9}.本地调试|x86.Build.0 = Debug|Any CPU
+		{45AEC823-F72A-4C69-952C-CF883B79C5F9}.最终发布|Any CPU.ActiveCfg = Debug|Any CPU
+		{45AEC823-F72A-4C69-952C-CF883B79C5F9}.最终发布|Any CPU.Build.0 = Debug|Any CPU
+		{45AEC823-F72A-4C69-952C-CF883B79C5F9}.最终发布|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{45AEC823-F72A-4C69-952C-CF883B79C5F9}.最终发布|Mixed Platforms.Build.0 = Debug|Any CPU
+		{45AEC823-F72A-4C69-952C-CF883B79C5F9}.最终发布|x86.ActiveCfg = Debug|Any CPU
+		{45AEC823-F72A-4C69-952C-CF883B79C5F9}.最终发布|x86.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -282,6 +308,7 @@ Global
 		{39E24165-0E3C-4980-A1C3-20A862DB2EA5} = {B7A5457B-99E4-4903-86C4-47F7076864FA}
 		{D14D9B61-0D77-4EB5-9562-003F26788C98} = {B7A5457B-99E4-4903-86C4-47F7076864FA}
 		{C00FAA32-AEAF-435A-848C-C171E0BD4277} = {B7A5457B-99E4-4903-86C4-47F7076864FA}
+		{45AEC823-F72A-4C69-952C-CF883B79C5F9} = {B7A5457B-99E4-4903-86C4-47F7076864FA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {711EBC9F-AA74-4E15-8E9E-744D846DB2E3}
