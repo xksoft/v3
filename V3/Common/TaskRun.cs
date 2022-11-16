@@ -498,7 +498,7 @@ namespace V3.Common
                     if (Model.V3Infos.MainDb.MyModels[Model.V3Infos.TaskDb[taskid].GetModel].Stp3_GET_Rules[i] != null)
                     {
                         V3.Bll.GetBll get = new Bll.GetBll(FinalHtml, Model.V3Infos.MainDb.MyModels[Model.V3Infos.TaskDb[taskid].GetModel].Stp3_GET_Rules[i].isGetPublicRules ? Model.V3Infos.MainDb.MyModels[Model.V3Infos.TaskDb[taskid].GetModel].Stp3_GET_PublicRules : Model.V3Infos.MainDb.MyModels[Model.V3Infos.TaskDb[taskid].GetModel].Stp3_GET_Rules[i].Rules);
-                        if (FinalLinks[ii].ToString().Contains("http://"))
+                        if (FinalLinks[ii].ToString().StartsWith("http"))
                             get.oldurl = FinalLinks[ii].ToString();
                         System.Collections.ArrayList list = new System.Collections.ArrayList();
                      
@@ -537,7 +537,7 @@ namespace V3.Common
                         string url = "";
                         string html = "";
                         V3.Bll.GetBll get = new GetBll(FinalHtml, Model.V3Infos.MainDb.MyModels[Model.V3Infos.TaskDb[taskid].GetModel].Stp3_pagerule);
-                        if (FinalLinks[ii].ToString().Contains("http://"))
+                        if (FinalLinks[ii].ToString().StartsWith("http"))
                             get.oldurl = FinalLinks[ii].ToString();
                         System.Collections.ArrayList list = new System.Collections.ArrayList();
                         list = get.getAllRules(taskid);
@@ -570,7 +570,7 @@ namespace V3.Common
                             XResponse response = execute.RunRequest(execute.Scripts[0]);
                             html = "源地址：" + execute.Scripts[0].Url + "\r\n\r\n" + Library.HtmlHelper.GetHtmlFromByte(response.BodyData, response.ContentType);
                              get = new GetBll(html, Model.V3Infos.MainDb.MyModels[Model.V3Infos.TaskDb[taskid].GetModel].Stp3_pagerule);
-                            if (FinalLinks[ii].ToString().Contains("http://"))
+                            if (FinalLinks[ii].ToString().StartsWith("http"))
                                 get.oldurl = FinalLinks[ii].ToString();
                             list = new System.Collections.ArrayList();
                             list = get.getAllRules(taskid);
@@ -590,7 +590,7 @@ namespace V3.Common
                                 get = new Bll.GetBll(html, Model.V3Infos.MainDb.MyModels[Model.V3Infos.TaskDb[taskid].GetModel].Stp3_GET_Rules[i].isGetPublicRules ? Model.V3Infos.MainDb.MyModels[Model.V3Infos.TaskDb[taskid].GetModel].Stp3_GET_PublicRules : Model.V3Infos.MainDb.MyModels[Model.V3Infos.TaskDb[taskid].GetModel].Stp3_GET_Rules[i].Rules);
                             }
                             catch { Log.LogNewline("[c14]本模块内容提取规则有误！[/c]"); break; }
-                            if (FinalLinks[ii].ToString().Contains("http://"))
+                            if (FinalLinks[ii].ToString().StartsWith("http"))
                                 get.oldurl = FinalLinks[ii].ToString();
                             list = new System.Collections.ArrayList();
                         
@@ -952,7 +952,7 @@ namespace V3.Common
                         break;
                     }
                     V3.Bll.GetBll get1 = new Bll.GetBll(RootHtml, Model.V3Infos.MainDb.MyModels[Model.V3Infos.TaskDb[taskid].GetModel].Stp1_PageRules);
-                    if (RootURl.Contains("http://"))
+                    if (RootURl.StartsWith("http"))
                         get1.oldurl = RootURl;
                     System.Collections.ArrayList list = get1.getAllRules(taskid);
                     for (int i = 0; i < list.Count; i++)
@@ -974,7 +974,7 @@ namespace V3.Common
                 if (!Model.V3Infos.MainDb.MyModels[Model.V3Infos.TaskDb[taskid].GetModel].Stp2_GET_NoNeedStp2)
                 {
                     V3.Bll.GetBll get1 = new Bll.GetBll(RootHtml, Model.V3Infos.MainDb.MyModels[Model.V3Infos.TaskDb[taskid].GetModel].Stp2_GET_Keyword_Rules.Rules);
-                    if (RootURl.Contains("http://"))
+                    if (RootURl.StartsWith("http"))
                         get1.oldurl = RootURl;
                     System.Collections.ArrayList list = new System.Collections.ArrayList();
                     list = get1.getAllRules(taskid);
@@ -1265,7 +1265,7 @@ namespace V3.Common
                     break;
                 }
                 V3.Bll.GetBll get1 = new Bll.GetBll(zidingyi_RootHtml, Model.V3Infos.MainDb.MyModels[Model.V3Infos.TaskDb[taskid].GetModel].Zidingyi_Stp1_PageRules);
-                if (RootURl.Contains("http://"))
+                if (RootURl.StartsWith("http"))
                     get1.oldurl = RootURl;
                 System.Collections.ArrayList list = get1.getAllRules(taskid);
                 if (!zidingyi_alllist.Contains(RootURl))
@@ -1324,7 +1324,7 @@ namespace V3.Common
                 string rhtml = Library.HtmlHelper.GetHtmlFromByte(response.BodyData, response.ContentType);
 
                 V3.Bll.GetBll get1 = new Bll.GetBll(rhtml, Model.V3Infos.MainDb.MyModels[Model.V3Infos.TaskDb[taskid].GetModel].Zidingyi_Stp2_GET_Rules.Rules);
-                if (zidingyi_alllist[listcount].ToString().Contains("http://"))
+                if (zidingyi_alllist[listcount].ToString().StartsWith("http"))
                     get1.oldurl = zidingyi_alllist[listcount].ToString();
                 System.Collections.ArrayList list = new System.Collections.ArrayList();
                 list = get1.getAllRules(taskid);
@@ -1607,7 +1607,7 @@ namespace V3.Common
 
                Thread.Sleep(Model.V3Infos.TaskDb[taskid].Spider_jiange);
                V3.Bll.GetBll get1 = new Bll.GetBll(RootHtml, Model.V3Infos.MainDb.MyModels[Model.V3Infos.TaskDb[taskid].GetModel].Stp1_spider_rules);
-                if (RootURl.Contains("http://")|| RootURl.Contains("https://"))
+                if (RootURl.StartsWith("http"))
                     get1.oldurl = RootURl;
                 System.Collections.ArrayList list = new System.Collections.ArrayList();
                 list = get1.getAllRules(taskid);
@@ -1759,7 +1759,7 @@ namespace V3.Common
                 string rhtml = Library.HtmlHelper.GetHtmlFromByte(response.BodyData, response.ContentType);
                 V3.Bll.GetBll get1 = new Bll.GetBll(rhtml,
                     Model.V3Infos.MainDb.MyModels[Model.V3Infos.TaskDb[taskid].GetModel].Tongbu_Stp2_Rules.Rules);
-                if (tongbu_alllist[listcount].ToString().Contains("http://"))
+                if (tongbu_alllist[listcount].ToString().StartsWith("http"))
                     get1.oldurl = tongbu_alllist[listcount].ToString();
                 System.Collections.ArrayList list = new System.Collections.ArrayList();
                 list = get1.getAllRules(taskid);

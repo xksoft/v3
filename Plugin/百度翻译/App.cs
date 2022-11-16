@@ -20,6 +20,13 @@ namespace 百度翻译
         public class TransResult {
             public string dst = "";
         }
+        public class TransData {
+
+            public string from = "";
+            public string to = "";
+            public string q = "";
+            public string termIds = "";
+        }
         public UserControl MainControl
         {
             get
@@ -45,6 +52,10 @@ namespace 百度翻译
         }
         public  Dictionary<int, string> ArticleProcess(Dictionary<int, string> objects)
         {
+            if (objects[10]=="zh")
+            {
+                return objects;
+            }
             Console.WriteLine("调用百度翻译");
             string AccessToken = GetBaiDuAccessToken(Parameters[0], Parameters[1]);
             Console.WriteLine("获取到AccessToken：" +AccessToken);
@@ -52,12 +63,38 @@ namespace 百度翻译
             {
                 objects[0] = FanYi(AccessToken, objects[0]);
             }
-            if (objects[1].Trim().Length>0) 
+            if (objects[1].Trim().Length > 0)
             {
-               
-                objects[1] = FanYi(AccessToken,objects[1]);
+                List<string> contents = new List<string>();
+                string content = "";
+                for (int i = 0; i < objects[1].Length; i++)
+                {
+                    content += objects[1][i];
+                    if (content.Length >= 4000 && (
+                        content.EndsWith(" ")
+                        || content.EndsWith(".")
+                        || content.EndsWith("。")
+                        || content.EndsWith(",")
+                        || content.EndsWith("，")
+                        || content.EndsWith("!")
+                        || content.EndsWith("！")))
+                    {
+                        contents.Add(content);
+                        content = "";
+                    }
+                }
+                if (content.Length > 0) { contents.Add(content); }
+                objects[1] = "";
+                foreach (string c in contents)
+                {
+                objects[1] += FanYi(AccessToken, c);
+                }
+
+                
             }
-            
+            objects[10] = "zh";
+
+
             return objects;
         }
 
@@ -71,18 +108,21 @@ namespace 百度翻译
         {
             get
             {
-                string[]s=new string[]{"",""};
+                string[]s=new string[]{"","","en"};
                 s[0] = frm.textBox_ApiKey.Text;
                 s[1] = frm.textBox_SecretKey.Text;
+                s[2]=frm.radioButton_en.Checked?"en":"zh";
                 return s;
             }
             set
             {
-                if (value == null) {value=new string[]{"",""}; }
-                if (value.Length ==2)
+                if (value == null) {value=new string[]{"","","en"}; }
+                if (value.Length ==3)
                 {
                     frm.textBox_ApiKey.Text = value[0];
                     frm.textBox_SecretKey.Text = value[1];
+                    frm.radioButton_en.Checked =( value[2] == "en");
+                    frm.radioButton_cn.Checked = (value[2] != "en");
                 }
 
             }
@@ -109,7 +149,12 @@ namespace 百度翻译
             item.Encoding = Encoding.UTF8;
             item.PostEncoding = Encoding.UTF8;
             item.URL = "https://aip.baidubce.com/rpc/2.0/mt/texttrans/v1?access_token=" + accesstoken;
-            item.Postdata = "{\"from\":\"auto\",\"to\":\"en\",\"q\":\"" + oldcontent + "\",\"termIds\":\"\"}";
+            TransData transData= new TransData();
+            transData.from = "auto";
+            transData.to = Parameters[2];
+            transData.q = oldcontent;
+
+            item.Postdata = JsonConvert.SerializeObject(transData);
             HttpResult result = http.GetHtml(item);
             string html = result.Html;
             JObject jobject = (JObject)JsonConvert.DeserializeObject(html);

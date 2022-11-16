@@ -32,6 +32,9 @@
             this.textBox_ApiKey = new System.Windows.Forms.TextBox();
             this.textBox_SecretKey = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.radioButton_cn = new System.Windows.Forms.RadioButton();
+            this.radioButton_en = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // label2
@@ -46,18 +49,18 @@
             // textBox_ApiKey
             // 
             this.textBox_ApiKey.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_ApiKey.Location = new System.Drawing.Point(72, 3);
+            this.textBox_ApiKey.Location = new System.Drawing.Point(81, 3);
             this.textBox_ApiKey.Name = "textBox_ApiKey";
-            this.textBox_ApiKey.Size = new System.Drawing.Size(422, 21);
+            this.textBox_ApiKey.Size = new System.Drawing.Size(413, 21);
             this.textBox_ApiKey.TabIndex = 4;
             this.textBox_ApiKey.Text = "10";
             // 
             // textBox_SecretKey
             // 
             this.textBox_SecretKey.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_SecretKey.Location = new System.Drawing.Point(72, 46);
+            this.textBox_SecretKey.Location = new System.Drawing.Point(81, 46);
             this.textBox_SecretKey.Name = "textBox_SecretKey";
-            this.textBox_SecretKey.Size = new System.Drawing.Size(422, 21);
+            this.textBox_SecretKey.Size = new System.Drawing.Size(413, 21);
             this.textBox_SecretKey.TabIndex = 6;
             this.textBox_SecretKey.Text = "10";
             // 
@@ -70,10 +73,44 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "Secret Key：";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(7, 84);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(65, 12);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "目标语言：";
+            // 
+            // radioButton_cn
+            // 
+            this.radioButton_cn.AutoSize = true;
+            this.radioButton_cn.Checked = true;
+            this.radioButton_cn.Location = new System.Drawing.Point(81, 84);
+            this.radioButton_cn.Name = "radioButton_cn";
+            this.radioButton_cn.Size = new System.Drawing.Size(47, 16);
+            this.radioButton_cn.TabIndex = 8;
+            this.radioButton_cn.TabStop = true;
+            this.radioButton_cn.Text = "中文";
+            this.radioButton_cn.UseVisualStyleBackColor = true;
+            // 
+            // radioButton_en
+            // 
+            this.radioButton_en.AutoSize = true;
+            this.radioButton_en.Location = new System.Drawing.Point(145, 84);
+            this.radioButton_en.Name = "radioButton_en";
+            this.radioButton_en.Size = new System.Drawing.Size(47, 16);
+            this.radioButton_en.TabIndex = 9;
+            this.radioButton_en.Text = "英文";
+            this.radioButton_en.UseVisualStyleBackColor = true;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.radioButton_en);
+            this.Controls.Add(this.radioButton_cn);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.textBox_SecretKey);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox_ApiKey);
@@ -90,5 +127,8 @@
         public System.Windows.Forms.TextBox textBox_ApiKey;
         public System.Windows.Forms.TextBox textBox_SecretKey;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
+        public System.Windows.Forms.RadioButton radioButton_cn;
+        public System.Windows.Forms.RadioButton radioButton_en;
     }
 }

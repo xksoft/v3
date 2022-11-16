@@ -947,13 +947,18 @@ namespace V3.Common
                 if (m.Success)
                 {
                     i++;
-                    Regex regex2 = new Regex("<(img|IMG) (.*?)(src|SRC)=('|\"|\\\\\"|)(.+?)(\\.jpg|\\.JPG|\\.gif|\\.GIF|\\.png|\\.PNG|\\.bmp|\\.BMP|\\.jpeg|\\.JPEG)(.*?)>", RegexOptions.Multiline | RegexOptions.IgnoreCase);
+                    // Regex regex2 = new Regex("<(img|IMG) (.*?)(src|SRC)=('|\"|\\\\\"|)(.+?)(\\.jpg|\\.JPG|\\.gif|\\.GIF|\\.png|\\.PNG|\\.bmp|\\.BMP|\\.jpeg|\\.JPEG)(.*?)>", RegexOptions.Multiline | RegexOptions.IgnoreCase);
+                    Regex regex2 = new Regex("<(img|IMG) (.*?)(src|SRC)=('|\"|\\\\\"|)(.+?)(.*?)>", RegexOptions.Multiline | RegexOptions.IgnoreCase);
                     MatchCollection mc2 = regex2.Matches(m.Value);
                     foreach (Match m2 in mc2)
                     {
                         if (m2.Success)
                         {
                             string oldURL = m2.Groups["5"].Value + m2.Groups["6"].Value;
+                            if (oldURL.Contains("\""))
+                            {
+                                oldURL = oldURL.Remove(oldURL.IndexOf("\""));
+                            }
                             if (isFormatPicUrl && oldurls != "")
                             {
                                 string newurl = geturl(oldURL); ;

@@ -414,10 +414,10 @@ namespace V3.Bll
                
                 Dictionary<string, string> image = new Dictionary<string, string>();
                 Dictionary<string, string> link = new Dictionary<string, string>();
+                Dictionary<string, string> source = new Dictionary<string, string>();
                 htmlstr = processImage(ref image, htmlstr, true, oldurl);//替换掉图片
-               
                 htmlstr = processLink(ref link, htmlstr, oldurl);//替换掉链接
-               
+                htmlstr = processSource(ref source, htmlstr, true, oldurl);
                 foreach (KeyValuePair<string, string> kvp in link)
                 {
                     htmlstr = htmlstr.Replace(kvp.Key, kvp.Value);//将链接标签重新返回
@@ -425,6 +425,10 @@ namespace V3.Bll
                 foreach (KeyValuePair<string, string> kvp in image)
                 {
                     htmlstr = htmlstr.Replace(kvp.Key, kvp.Value);//将图片标签重新返回
+                }
+                foreach (KeyValuePair<string, string> kvp in source)
+                {
+                    htmlstr = htmlstr.Replace(kvp.Key, kvp.Value);//将source标签重新返回
                 }
             }
             return htmlstr;
@@ -440,13 +444,18 @@ namespace V3.Bll
                 if (m.Success)
                 {
                     i++;
-                    Regex regex2 = new Regex("<(img|IMG) (.*?)(src|SRC)=('|\"|\\\\\"|)(.+?)(\\.jpg|\\.JPG|\\.gif|\\.GIF|\\.png|\\.PNG|\\.bmp|\\.BMP|\\.jpeg|\\.JPEG)(.*?)>", RegexOptions.Multiline | RegexOptions.IgnoreCase);
+                    // Regex regex2 = new Regex("<(img|IMG) (.*?)(src|SRC)=('|\"|\\\\\"|)(.+?)(\\.jpg|\\.JPG|\\.gif|\\.GIF|\\.png|\\.PNG|\\.bmp|\\.BMP|\\.jpeg|\\.JPEG)(.*?)>", RegexOptions.Multiline | RegexOptions.IgnoreCase);
+                    Regex regex2 = new Regex("<(img|IMG) (.*?)(src|SRC)=('|\"|\\\\\"|)(.+?)(.*?)>", RegexOptions.Multiline | RegexOptions.IgnoreCase);
                     MatchCollection mc2 = regex2.Matches(m.Value);
                     foreach (Match m2 in mc2)
                     {
                         if (m2.Success)
                         {
                             string oldURL = m2.Groups["5"].Value + m2.Groups["6"].Value;
+                            if (oldURL.Contains("\"")) 
+                            {
+                                oldURL = oldURL.Remove(oldURL.IndexOf("\""));
+                            }
                             if (isFormatPicUrl && oldurls != "")
                             {
                                 string newurl = GetFullUrl(oldurl,oldURL,true);
@@ -455,6 +464,44 @@ namespace V3.Bll
                             }
                             result = result.Replace(m.Value, "$formatImage" + i + "$");
                             imageHash.Add("$formatImage" + i + "$", "<img src=\"" + oldURL + "\" border=0 >");
+                        }
+                    }
+                }
+            }
+
+            return result;
+        }
+
+        string processSource(ref Dictionary<string, string> videoHash, string sourceString, bool isFormatVideoUrl, string oldurls)
+        {
+            string result = sourceString;
+            Regex regex1 = new Regex("<source.*?>", RegexOptions.Multiline | RegexOptions.IgnoreCase);
+            MatchCollection mc = regex1.Matches(result);
+            int i = 0;
+            foreach (Match m in mc)
+            {
+                if (m.Success)
+                {
+                    i++;
+                     Regex regex2 = new Regex("<(source|source) (.*?)(src|SRC)=('|\"|\\\\\"|)(.+?)(.*?)>", RegexOptions.Multiline | RegexOptions.IgnoreCase);
+                    MatchCollection mc2 = regex2.Matches(m.Value);
+                    foreach (Match m2 in mc2)
+                    {
+                        if (m2.Success)
+                        {
+                            string oldURL = m2.Groups["5"].Value + m2.Groups["6"].Value;
+                            if (oldURL.Contains("\""))
+                            {
+                                oldURL = oldURL.Remove(oldURL.IndexOf("\""));
+                            }
+                            if (isFormatVideoUrl && oldurls != "")
+                            {
+                                string newurl = GetFullUrl(oldurl, oldURL, true);
+                                if (newurl != null)
+                                    oldURL = newurl;
+                            }
+                            result = result.Replace(m.Value, "$formatVideo" + i + "$");
+                            videoHash.Add("$formatVideo" + i + "$", "<source src=\"" + oldURL + "\"  type=\"video/mp4\">");
                         }
                     }
                 }
@@ -635,10 +682,13 @@ namespace V3.Bll
                     return ReplaceUrl(OldUrl);
                 string url = "";
 
-
-                if (OldUrl.Substring(0, 1) == "/")
+                if (OldUrl.StartsWith(@"//" + olduri.Host))
                 {
-                    url = @"http://" + olduri.Host + OldUrl;
+                    url = olduri.Scheme + @":" + OldUrl;
+                }
+               else if (OldUrl.Substring(0, 1) == "/")
+                {
+                    url = olduri.Scheme + @"://" + olduri.Host + OldUrl;
                 }
                 else
                 {
