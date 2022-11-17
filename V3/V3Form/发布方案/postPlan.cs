@@ -73,10 +73,10 @@ namespace V3.V3Form.发布模块
             if (Model.Stp3_POST_Falsetag==null) { Model.Stp3_POST_Falsetag = new string[0]; }
             if (Model.Stp3_POST_Truetag == null) { Model.Stp3_POST_Truetag = new string[0]; }
             if (Model.Stp3_POST_MakeHtmlUrls == null) { Model.Stp3_POST_MakeHtmlUrls = new string[0]; }
-            labPlanDesign.Text = Model.PlanDesignName;
+           
             labPlanName.Text = Model.PlanName;
             labPlanReadme.Text = Model.PlanReadme;
-            labPlanUrl.Text = Model.PlanUrl;
+
             labUpdate.Text = Model.UpdateTime;
             txtAdminUrl.Text = Model.Testadminurl;
         }

@@ -54,12 +54,8 @@
             this.istate = new DevExpress.XtraEditors.LabelControl();
             this.labUpdate = new DevExpress.XtraEditors.LabelControl();
             this.labelX9 = new DevExpress.XtraEditors.LabelControl();
-            this.labPlanUrl = new DevExpress.XtraEditors.LabelControl();
-            this.labPlanDesign = new DevExpress.XtraEditors.LabelControl();
             this.labPlanReadme = new DevExpress.XtraEditors.LabelControl();
             this.labPlanName = new DevExpress.XtraEditors.LabelControl();
-            this.labelX4 = new DevExpress.XtraEditors.LabelControl();
-            this.labelX3 = new DevExpress.XtraEditors.LabelControl();
             this.labelX2 = new DevExpress.XtraEditors.LabelControl();
             this.labelX1 = new DevExpress.XtraEditors.LabelControl();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
@@ -101,9 +97,9 @@
             this.panelEx1.Controls.Add(this.groupPanel2);
             this.panelEx1.Controls.Add(this.groupPanel1);
             this.panelEx1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelEx1.Location = new System.Drawing.Point(0, 30);
+            this.panelEx1.Location = new System.Drawing.Point(0, 28);
             this.panelEx1.Name = "panelEx1";
-            this.panelEx1.Size = new System.Drawing.Size(733, 369);
+            this.panelEx1.Size = new System.Drawing.Size(733, 373);
             this.panelEx1.TabIndex = 0;
             // 
             // groupPanel2
@@ -221,7 +217,7 @@
             this.s1.Properties.Caption = "关键词智能抓取模式";
             this.s1.Properties.CheckStyle = DevExpress.XtraEditors.Controls.CheckStyles.Radio;
             this.s1.Properties.RadioGroupIndex = 1;
-            this.s1.Size = new System.Drawing.Size(143, 19);
+            this.s1.Size = new System.Drawing.Size(143, 20);
             this.s1.TabIndex = 1;
             this.s1.CheckedChanged += new System.EventHandler(this.s1_CheckedChanged);
             // 
@@ -232,7 +228,7 @@
             this.s2.Properties.Caption = "自定义抓取模式";
             this.s2.Properties.CheckStyle = DevExpress.XtraEditors.Controls.CheckStyles.Radio;
             this.s2.Properties.RadioGroupIndex = 1;
-            this.s2.Size = new System.Drawing.Size(111, 19);
+            this.s2.Size = new System.Drawing.Size(111, 20);
             this.s2.TabIndex = 2;
             this.s2.TabStop = false;
             this.s2.CheckedChanged += new System.EventHandler(this.s2_CheckedChanged);
@@ -244,7 +240,7 @@
             this.s3.Properties.Caption = "蜘蛛爬行模式";
             this.s3.Properties.CheckStyle = DevExpress.XtraEditors.Controls.CheckStyles.Radio;
             this.s3.Properties.RadioGroupIndex = 1;
-            this.s3.Size = new System.Drawing.Size(109, 19);
+            this.s3.Size = new System.Drawing.Size(109, 20);
             this.s3.TabIndex = 3;
             this.s3.TabStop = false;
             this.s3.CheckedChanged += new System.EventHandler(this.s3_CheckedChanged);
@@ -256,7 +252,7 @@
             this.s4.Properties.Caption = "同步追踪模式";
             this.s4.Properties.CheckStyle = DevExpress.XtraEditors.Controls.CheckStyles.Radio;
             this.s4.Properties.RadioGroupIndex = 1;
-            this.s4.Size = new System.Drawing.Size(102, 19);
+            this.s4.Size = new System.Drawing.Size(102, 20);
             this.s4.TabIndex = 4;
             this.s4.TabStop = false;
             this.s4.CheckedChanged += new System.EventHandler(this.s4_CheckedChanged);
@@ -298,12 +294,8 @@
             this.groupPanel1.Controls.Add(this.ipanel);
             this.groupPanel1.Controls.Add(this.labUpdate);
             this.groupPanel1.Controls.Add(this.labelX9);
-            this.groupPanel1.Controls.Add(this.labPlanUrl);
-            this.groupPanel1.Controls.Add(this.labPlanDesign);
             this.groupPanel1.Controls.Add(this.labPlanReadme);
             this.groupPanel1.Controls.Add(this.labPlanName);
-            this.groupPanel1.Controls.Add(this.labelX4);
-            this.groupPanel1.Controls.Add(this.labelX3);
             this.groupPanel1.Controls.Add(this.labelX2);
             this.groupPanel1.Controls.Add(this.labelX1);
             this.groupPanel1.Location = new System.Drawing.Point(7, 3);
@@ -319,11 +311,11 @@
             this.ipanel.Appearance.Options.UseBorderColor = true;
             this.ipanel.Controls.Add(this.myprocess);
             this.ipanel.Controls.Add(this.istate);
-            this.ipanel.Location = new System.Drawing.Point(11, 29);
+            this.ipanel.Location = new System.Drawing.Point(14, 29);
             this.ipanel.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Office2003;
             this.ipanel.LookAndFeel.UseDefaultLookAndFeel = false;
             this.ipanel.Name = "ipanel";
-            this.ipanel.Size = new System.Drawing.Size(694, 134);
+            this.ipanel.Size = new System.Drawing.Size(691, 134);
             this.ipanel.TabIndex = 73;
             this.ipanel.Visible = false;
             // 
@@ -359,22 +351,6 @@
             this.labelX9.TabIndex = 11;
             this.labelX9.Text = "更新时间：";
             // 
-            // labPlanUrl
-            // 
-            this.labPlanUrl.Location = new System.Drawing.Point(89, 119);
-            this.labPlanUrl.Name = "labPlanUrl";
-            this.labPlanUrl.Size = new System.Drawing.Size(29, 14);
-            this.labPlanUrl.TabIndex = 10;
-            this.labPlanUrl.Text = "None";
-            // 
-            // labPlanDesign
-            // 
-            this.labPlanDesign.Location = new System.Drawing.Point(89, 89);
-            this.labPlanDesign.Name = "labPlanDesign";
-            this.labPlanDesign.Size = new System.Drawing.Size(29, 14);
-            this.labPlanDesign.TabIndex = 9;
-            this.labPlanDesign.Text = "None";
-            // 
             // labPlanReadme
             // 
             this.labPlanReadme.Location = new System.Drawing.Point(89, 59);
@@ -390,22 +366,6 @@
             this.labPlanName.Size = new System.Drawing.Size(29, 14);
             this.labPlanName.TabIndex = 7;
             this.labPlanName.Text = "None";
-            // 
-            // labelX4
-            // 
-            this.labelX4.Location = new System.Drawing.Point(11, 119);
-            this.labelX4.Name = "labelX4";
-            this.labelX4.Size = new System.Drawing.Size(72, 14);
-            this.labelX4.TabIndex = 6;
-            this.labelX4.Text = "模块交流贴：";
-            // 
-            // labelX3
-            // 
-            this.labelX3.Location = new System.Drawing.Point(11, 89);
-            this.labelX3.Name = "labelX3";
-            this.labelX3.Size = new System.Drawing.Size(72, 14);
-            this.labelX3.TabIndex = 4;
-            this.labelX3.Text = "模块设计者：";
             // 
             // labelX2
             // 
@@ -533,31 +493,31 @@
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(733, 30);
+            this.barDockControlTop.Size = new System.Drawing.Size(733, 28);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 399);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 401);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(733, 25);
+            this.barDockControlBottom.Size = new System.Drawing.Size(733, 23);
             // 
             // barDockControlLeft
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 30);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 28);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 369);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 373);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(733, 30);
+            this.barDockControlRight.Location = new System.Drawing.Point(733, 28);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 369);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 373);
             // 
             // getPlan
             // 
@@ -615,8 +575,6 @@
         private DevExpress.XtraEditors.CheckEdit s1;
         private DevExpress.XtraEditors.LabelControl labelX8;
         private DevExpress.XtraEditors.GroupControl groupPanel1;
-        private DevExpress.XtraEditors.LabelControl labelX4;
-        private DevExpress.XtraEditors.LabelControl labelX3;
         private DevExpress.XtraEditors.LabelControl labelX2;
         private DevExpress.XtraEditors.LabelControl labelX1;
         private DevExpress.XtraEditors.LabelControl labelX7;
@@ -626,8 +584,6 @@
         private DevExpress.XtraEditors.SimpleButton btn_step1;
         private DevExpress.XtraEditors.SimpleButton btn_step3;
         private DevExpress.XtraEditors.SimpleButton btn_step2;
-        private DevExpress.XtraEditors.LabelControl labPlanUrl;
-        private DevExpress.XtraEditors.LabelControl labPlanDesign;
         private DevExpress.XtraEditors.LabelControl labPlanReadme;
         private DevExpress.XtraEditors.LabelControl labPlanName;
         private DevExpress.XtraEditors.LabelControl labUpdate;

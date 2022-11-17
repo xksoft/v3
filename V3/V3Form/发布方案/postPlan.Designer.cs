@@ -43,12 +43,8 @@
             this.istate = new DevExpress.XtraEditors.LabelControl();
             this.labUpdate = new DevExpress.XtraEditors.LabelControl();
             this.labelX9 = new DevExpress.XtraEditors.LabelControl();
-            this.labPlanUrl = new DevExpress.XtraEditors.LabelControl();
-            this.labPlanDesign = new DevExpress.XtraEditors.LabelControl();
             this.labPlanReadme = new DevExpress.XtraEditors.LabelControl();
             this.labPlanName = new DevExpress.XtraEditors.LabelControl();
-            this.labelX4 = new DevExpress.XtraEditors.LabelControl();
-            this.labelX3 = new DevExpress.XtraEditors.LabelControl();
             this.labelX2 = new DevExpress.XtraEditors.LabelControl();
             this.labelX1 = new DevExpress.XtraEditors.LabelControl();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
@@ -163,12 +159,8 @@
             this.groupPanel1.Controls.Add(this.ipanel);
             this.groupPanel1.Controls.Add(this.labUpdate);
             this.groupPanel1.Controls.Add(this.labelX9);
-            this.groupPanel1.Controls.Add(this.labPlanUrl);
-            this.groupPanel1.Controls.Add(this.labPlanDesign);
             this.groupPanel1.Controls.Add(this.labPlanReadme);
             this.groupPanel1.Controls.Add(this.labPlanName);
-            this.groupPanel1.Controls.Add(this.labelX4);
-            this.groupPanel1.Controls.Add(this.labelX3);
             this.groupPanel1.Controls.Add(this.labelX2);
             this.groupPanel1.Controls.Add(this.labelX1);
             this.groupPanel1.Location = new System.Drawing.Point(8, 3);
@@ -184,11 +176,11 @@
             this.ipanel.Appearance.Options.UseBorderColor = true;
             this.ipanel.Controls.Add(this.myprocess);
             this.ipanel.Controls.Add(this.istate);
-            this.ipanel.Location = new System.Drawing.Point(18, 27);
+            this.ipanel.Location = new System.Drawing.Point(21, 26);
             this.ipanel.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Office2003;
             this.ipanel.LookAndFeel.UseDefaultLookAndFeel = false;
             this.ipanel.Name = "ipanel";
-            this.ipanel.Size = new System.Drawing.Size(659, 153);
+            this.ipanel.Size = new System.Drawing.Size(656, 154);
             this.ipanel.TabIndex = 71;
             this.ipanel.Visible = false;
             // 
@@ -224,22 +216,6 @@
             this.labelX9.TabIndex = 11;
             this.labelX9.Text = "更新时间：";
             // 
-            // labPlanUrl
-            // 
-            this.labPlanUrl.Location = new System.Drawing.Point(120, 127);
-            this.labPlanUrl.Name = "labPlanUrl";
-            this.labPlanUrl.Size = new System.Drawing.Size(29, 14);
-            this.labPlanUrl.TabIndex = 10;
-            this.labPlanUrl.Text = "None";
-            // 
-            // labPlanDesign
-            // 
-            this.labPlanDesign.Location = new System.Drawing.Point(120, 94);
-            this.labPlanDesign.Name = "labPlanDesign";
-            this.labPlanDesign.Size = new System.Drawing.Size(29, 14);
-            this.labPlanDesign.TabIndex = 9;
-            this.labPlanDesign.Text = "None";
-            // 
             // labPlanReadme
             // 
             this.labPlanReadme.Location = new System.Drawing.Point(120, 60);
@@ -255,22 +231,6 @@
             this.labPlanName.Size = new System.Drawing.Size(29, 14);
             this.labPlanName.TabIndex = 7;
             this.labPlanName.Text = "None";
-            // 
-            // labelX4
-            // 
-            this.labelX4.Location = new System.Drawing.Point(21, 128);
-            this.labelX4.Name = "labelX4";
-            this.labelX4.Size = new System.Drawing.Size(72, 14);
-            this.labelX4.TabIndex = 6;
-            this.labelX4.Text = "模块交流贴：";
-            // 
-            // labelX3
-            // 
-            this.labelX3.Location = new System.Drawing.Point(21, 94);
-            this.labelX3.Name = "labelX3";
-            this.labelX3.Size = new System.Drawing.Size(72, 14);
-            this.labelX3.TabIndex = 4;
-            this.labelX3.Text = "模块设计者：";
             // 
             // labelX2
             // 
@@ -472,16 +432,12 @@
         private DevExpress.XtraEditors.PanelControl panelEx1;
         private DevExpress.XtraEditors.GroupControl groupPanel2;
         private DevExpress.XtraEditors.GroupControl groupPanel1;
-        private DevExpress.XtraEditors.LabelControl labelX4;
-        private DevExpress.XtraEditors.LabelControl labelX3;
         private DevExpress.XtraEditors.LabelControl labelX2;
         private DevExpress.XtraEditors.LabelControl labelX1;
         private DevExpress.XtraEditors.LabelControl labelX7;
         private DevExpress.XtraEditors.SimpleButton btn_step1;
         private DevExpress.XtraEditors.SimpleButton btn_step3;
         private DevExpress.XtraEditors.SimpleButton btn_step2;
-        private DevExpress.XtraEditors.LabelControl labPlanUrl;
-        private DevExpress.XtraEditors.LabelControl labPlanDesign;
         private DevExpress.XtraEditors.LabelControl labPlanReadme;
         private DevExpress.XtraEditors.LabelControl labPlanName;
         private DevExpress.XtraEditors.LabelControl labUpdate;

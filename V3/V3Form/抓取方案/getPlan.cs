@@ -72,14 +72,15 @@ namespace V3.V3Form.抓取模块
             model.UpdateTime = DateTime.Now.ToString();
             model.GetMajia = txtmajia.Text;
             model.UserAgent = txtuseragent.Text;
+           
         }
         void GetInfo()
         {
             if(IsShow){
-            labPlanDesign.Text = model.PlanDesignName;
+          
             labPlanName.Text = model.PlanName;
             labPlanReadme.Text = model.PlanReadme;
-            labPlanUrl.Text = model.PlanUrl;
+           
             labUpdate.Text = model.UpdateTime;
             txtmajia.Text = model.GetMajia;
             txtuseragent.Text = model.UserAgent;

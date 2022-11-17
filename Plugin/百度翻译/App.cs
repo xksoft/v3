@@ -67,10 +67,19 @@ namespace 百度翻译
             {
                 List<string> contents = new List<string>();
                 string content = "";
+                bool inhtml = true;//如果进入html标签，则不截断
                 for (int i = 0; i < objects[1].Length; i++)
                 {
+                    if (objects[1][i] == '<') {
+                        inhtml = true;
+                    }
+                    else if (objects[1][i] == '>')
+                    {
+                        inhtml = false;
+
+                    }
                     content += objects[1][i];
-                    if (content.Length >= 4000 && (
+                    if (content.Length >= 4000 &&!inhtml&& (
                         content.EndsWith(" ")
                         || content.EndsWith(".")
                         || content.EndsWith("。")
@@ -87,7 +96,8 @@ namespace 百度翻译
                 objects[1] = "";
                 foreach (string c in contents)
                 {
-                objects[1] += FanYi(AccessToken, c);
+                    Thread.Sleep(1100);
+                    objects[1] += FanYi(AccessToken, c);
                 }
 
                 
@@ -149,7 +159,7 @@ namespace 百度翻译
             item.Encoding = Encoding.UTF8;
             item.PostEncoding = Encoding.UTF8;
             item.URL = "https://aip.baidubce.com/rpc/2.0/mt/texttrans/v1?access_token=" + accesstoken;
-            TransData transData= new TransData();
+            TransData transData = new TransData();
             transData.from = "auto";
             transData.to = Parameters[2];
             transData.q = oldcontent;
@@ -184,27 +194,27 @@ namespace 百度翻译
             }
             else
             {
-                TransResult transResult = JsonConvert.DeserializeObject<TransResult>(((JArray)jobject["result"]["trans_result"]).First.ToString());
-                if (transResult.dst.Length > 0)
+
+                List<TransResult> transResults = JsonConvert.DeserializeObject<List<TransResult>>(((JArray)jobject["result"]["trans_result"]).ToString());
+                newcontent = "";
+                foreach (TransResult transResult in transResults)
                 {
-                    newcontent = transResult.dst;
-                    foreach (string key in dics.Keys.ToArray()) 
+                    if (transResult.dst.Length > 0)
                     {
-                        newcontent = newcontent.Replace(key, dics[key]);
-                    
+                        newcontent += transResult.dst + (transResults.Count > 1 ? "\r\n" : "");
                     }
-                    return newcontent;
                 }
-                else {
-                    Console.WriteLine("百度翻译插件接口异常：未能获取到翻译结果，10秒钟后重试..." );
-                    Thread.Sleep(10000);
-                    goto retry;
+
+                foreach (string key in dics.Keys.ToArray())
+                {
+                    newcontent = newcontent.Replace(key, dics[key]);
 
                 }
-               
+                return newcontent;
+
             }
-
         }
+        
         public string GetBaiDuAccessToken(string apikey, string secretkey)
         {
 
