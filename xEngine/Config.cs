@@ -10,7 +10,7 @@
         internal static int ReceiveTimeout = 30000;
 
         public static int TimeOut = 30;
-        public static bool IsUseHttpClient = false;
+        public static bool IsUseHttpClient = true;
 
         /// <summary>
         ///     Http请求操作超时时间设定(单位：毫秒 默认值，3000 30000 30000）

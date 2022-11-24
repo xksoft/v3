@@ -427,6 +427,7 @@ namespace xEngine.Execute
             {
                 if (data[i] == 13 && data[i + 1] == 10 & data[i + 2] == 13 & data[i + 3] == 10)
                 {
+                   
                     headdata = new byte[i + 4];
                     Array.Copy(data, 0, headdata, 0, headdata.Length);
                     bodydata = new byte[data.Length - headdata.Length];
@@ -434,7 +435,13 @@ namespace xEngine.Execute
                     break;
                 }
             }
+            //if (headdata.Length==0&& responseHeaderBuilder==null)
+            //{
+            //    headdata = new byte[data.Length];
+            //    Array.Copy(data, 0, headdata, 0, data.Length);
 
+
+            //}
             if (headdata.Length > 0)
             {
                 responseHeaderBuilder = new StringBuilder();
@@ -453,6 +460,8 @@ namespace xEngine.Execute
                             int.TryParse(status[1], out response.StatusCode);
                         }
                     }
+
+                    if (str==null) { continue; }
                     var kv = str.Split(':');
                     if (kv.Length > 2)
                     {
@@ -481,7 +490,7 @@ namespace xEngine.Execute
                             break;
                     }
                     responseHeaderBuilder.AppendLine(str);
-                } while (str != "");
+                } while (str!=null&&str != "");
             }
             return bodydata;
         }
@@ -509,7 +518,7 @@ namespace xEngine.Execute
             clientStream.Write(requestMs.ToArray(), 0, (int)requestMs.Length);
             clientStream.Flush();
 
-
+            
             return clientStream;
         }
 
@@ -520,7 +529,7 @@ namespace xEngine.Execute
             var memStream = new MemoryStream();
 
             client.Client.NoDelay = true;
-
+           
 
             var contentLength = -1;
             var ischunked = false;
@@ -542,7 +551,7 @@ namespace xEngine.Execute
                     var bodydata = GetBodyData(ref contentLength, ref ischunked, ref contentencoding,
                         ref responseHeader,
                         response, setcookies, data);
-                    response.ResponseHeader = responseHeader.ToString();
+                    response.ResponseHeader =(responseHeader==null?"": responseHeader.ToString());
                     memStream.Write(bodydata, 0, bodydata.Length);
                 }
                 else
@@ -1044,6 +1053,7 @@ namespace xEngine.Execute
 
                     client.ReceiveBufferSize = 4096;
                     client.SendBufferSize = 4096;
+                    
                     client.NoDelay = true;
 
                     #region 合成请求包
